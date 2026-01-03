@@ -13,38 +13,45 @@ By leveraging the **Strategy Pattern** for data ingestion and **Google Gemini 1.
 *   **Zero-Trust Security**: Input sanitization using **DOMPurify** to prevent XSS from untrusted feeds.
 *   **AI-Powered Analysis**: Uses Google Gemini to summarize threats, assign severity scores (1-10), and extract relevant tags.
 *   **FileStore Architecture**: Flat-file storage simulation replacing Redis for simplified data persistence (`data/raw`, `data/analyzed`, `data/drafts`).
+*   **Headless Automation**: A Node.js engine (`daily_batch.mjs`) that runs autonomously to fetch, analyze, and commit intelligence reports.
 
 ## System Map
 
 ```mermaid
 graph TD
     User[Security Analyst] -->|View & Control| UI[Web Interface]
-    UI -->|Select Strategy| Factory[Ingestor Factory]
-    Factory -->|Instantiate| RSS[RSS Ingestor]
-    Factory -->|Instantiate| CISA[CISA Ingestor]
+    Cron[MacOS Cron] -->|Trigger| Bot[daily_batch.mjs]
     
-    RSS -->|Fetch via Proxy| ExtRSS[External RSS Feeds]
-    CISA -->|Fetch| ExtCISA[US-CERT XML]
-    
-    subgraph "Sanitization"
-        ExtRSS -->|Raw HTML| Purify[DOMPurify]
-        ExtCISA -->|Raw HTML| Purify
+    subgraph "Browser Engine"
+        UI --> RSS[RSS Ingestor]
+        UI --> CISA[CISA Ingestor]
+        RSS -->|Sanitize| PurifyDOM[DOMPurify]
     end
+
+    subgraph "Node Engine"
+        Bot --> NodeRSS[RSS Parser]
+        Bot --> NodeSanitizer[JSDOM + DOMPurify]
+    end
+
+    NodeRSS -->|Write| Disk[FileStore (data/)]
+    PurifyDOM -->|Write| Disk
     
-    Purify -->|Cleaned Text| StoreRaw[FileStore: data/raw]
-    
-    UI -->|Request Analysis| Agent[AI Agent]
-    Agent -->|Prompt| GenAI[Google Gemini API]
-    GenAI -->|JSON Response| Agent
-    
-    Agent -->|Enrich| StoreAnalyzed[FileStore: data/analyzed]
-    
-    UI -->|Create Draft| StoreDraft[FileStore: data/drafts]
+    Bot -->|Git Ops| GitHub[Remote Repo]
 ```
 
-## Quick Start
-1.  Select an Ingestion Strategy (RSS, CISA, or HackerNews).
-2.  Input a source URL or use the CISA default.
-3.  Click **Fetch** to retrieve and sanitize raw articles (saved to `data/raw`).
-4.  Click **Analyze** to process articles through the LLM (saved to `data/analyzed`).
-5.  Click **Save Draft** to generate Markdown for Velog (saved to `data/drafts`).
+## Quick Start (Web App)
+1.  Run `npm install` and `npm start`.
+2.  Select an Ingestion Strategy (RSS, CISA, or HackerNews).
+3.  Click **Fetch** -> **Analyze** -> **Save Draft**.
+
+## Automation Setup (Headless)
+1.  Configure `automation.config.json`.
+2.  Set `API_KEY` in your `.env` file.
+3.  Run the batch job manually:
+    ```bash
+    npm run automation:run
+    ```
+4.  Setup Crontab (Example):
+    ```bash
+    0 8 * * * cd /path/to/project && /usr/local/bin/node scripts/daily_batch.mjs >> automation.log 2>&1
+    ```

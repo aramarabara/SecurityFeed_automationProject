@@ -1,0 +1,33 @@
+{
+  "bot": {
+    "name": "SecurityFeedBot",
+    "email": "bot@securityfeed.ai"
+  },
+  "schedule": {
+    "timezone": "Asia/Seoul",
+    "description": "Recommended Crontab: 0 8 * * * (Daily at 8am)"
+  },
+  "git": {
+    "auto_commit": true,
+    "branch": "main",
+    "commit_message_template": "chore(intel): automated security feed update [TIMESTAMP]"
+  },
+  "workflow": {
+    "sources": [
+      {
+        "type": "RSS",
+        "url": "https://feeds.feedburner.com/TheHackersNews",
+        "name": "The Hacker News"
+      },
+      {
+        "type": "RSS",
+        "url": "https://www.cisa.gov/uscert/ncas/alerts.xml",
+        "name": "CISA US-CERT"
+      }
+    ],
+    "thresholds": {
+      "min_severity_for_draft": 7,
+      "max_articles_per_run": 5
+    }
+  }
+}
