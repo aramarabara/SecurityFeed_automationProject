@@ -1,0 +1,5 @@
+{
+  "name": "SecurityFeed AI",
+  "description": "Intelligent security news aggregator using Strategy Pattern and GenAI analysis.",
+  "requestFramePermissions": []
+}
