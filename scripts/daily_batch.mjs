@@ -158,6 +158,66 @@ async function fetchAndIngest() {
   return rawArticles;
 }
 
+// Quick pre-analysis: Get severity only (faster, cheaper)
+async function quickSeverityCheck(article) {
+  const prompt = `
+    Analyze the following security news article and provide ONLY severity assessment.
+    
+    Title: ${article.title}
+    Content: ${article.content.substring(0, 500)}...
+    
+    Tasks:
+    1. Assign a severity score (1-10) where 10 is global internet meltdown and 1 is minor noise.
+    2. Determine severity level (CRITICAL, HIGH, MEDIUM, LOW, INFO).
+    
+    Be fast and concise. Only return severity information.
+  `;
+
+  try {
+    const response = await ai.models.generateContent({
+      model: MODEL_ID,
+      contents: prompt,
+      config: {
+        systemInstruction: "You are a Senior Cyber Threat Intelligence Analyst. Provide quick severity assessment only.",
+        responseMimeType: "application/json",
+        responseSchema: {
+          type: Type.OBJECT,
+          properties: {
+            severity_score: { 
+              type: Type.NUMBER,
+              description: "Severity score from 1-10"
+            },
+            severity_level: { 
+              type: Type.STRING, 
+              enum: ["CRITICAL", "HIGH", "MEDIUM", "LOW", "INFO"],
+              description: "Severity level classification"
+            }
+          },
+          required: ["severity_score", "severity_level"]
+        }
+      }
+    });
+
+    const quickAnalysis = JSON.parse(response.text);
+    return {
+      ...article,
+      severity_score: quickAnalysis.severity_score,
+      severity_level: quickAnalysis.severity_level,
+      is_pre_analyzed: true
+    };
+  } catch (e) {
+    console.error(`   ⚠️ Quick severity check failed for "${article.title}":`, e.message);
+    // Fallback: assign low severity if check fails
+    return {
+      ...article,
+      severity_score: 1,
+      severity_level: 'INFO',
+      is_pre_analyzed: true
+    };
+  }
+}
+
+// Full analysis: Complete article analysis with summary, tags, references
 async function analyzeArticle(article, targetLanguage = 'english') {
   const langInstruction = getLanguageInstruction(targetLanguage);
   
@@ -248,10 +308,34 @@ async function runAnalysis(articles) {
   const languages = parseLanguages();
   console.log(`   📝 Target languages: ${languages.join(', ')}`);
   
+  // Step 2.1: Quick severity pre-analysis for all articles
+  console.log("   🔍 Step 2.1: Quick severity pre-analysis...");
+  const preAnalyzed = [];
+  
+  for (const article of articles) {
+    process.stdout.write(`   - Quick check: ${article.title.substring(0, 40)}... `);
+    const preResult = await quickSeverityCheck(article);
+    console.log(`[Score: ${preResult.severity_score} (${preResult.severity_level})]`);
+    preAnalyzed.push(preResult);
+  }
+  
+  // Step 2.2: Sort by severity (highest first) and select top 1-3
+  preAnalyzed.sort((a, b) => b.severity_score - a.severity_score);
+  
+  const maxToAnalyze = Math.min(3, Math.max(1, preAnalyzed.length));
+  const selectedArticles = preAnalyzed.slice(0, maxToAnalyze);
+  
+  console.log(`   ✅ Selected ${selectedArticles.length} article(s) for full analysis (top severity):`);
+  selectedArticles.forEach((art, idx) => {
+    console.log(`      ${idx + 1}. [${art.severity_level}] ${art.title.substring(0, 50)} (Score: ${art.severity_score})`);
+  });
+  
+  // Step 2.3: Full analysis for selected articles only
+  console.log("   📊 Step 2.3: Full analysis of selected articles...");
   const analyzed = [];
 
-  for (const article of articles) {
-    process.stdout.write(`   - Analyzing: ${article.title.substring(0, 40)}... `);
+  for (const article of selectedArticles) {
+    process.stdout.write(`   - Full analysis: ${article.title.substring(0, 40)}... `);
     
     // Analyze in primary language (first in list)
     const primaryLang = languages[0];
@@ -287,6 +371,8 @@ async function runAnalysis(articles) {
       console.log(`[FAILED]`);
     }
   }
+  
+  console.log(`   ✅ Completed: ${analyzed.length} article(s) fully analyzed`);
   return analyzed;
 }
 
