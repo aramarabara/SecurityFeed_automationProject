@@ -1,0 +1,19 @@
+{
+  "id": "0c5a2bbe-81e6-4ddf-9b2b-278648319735",
+  "title": "Kimwolf Android Botnet Infects Over 2 Million Devices via Exposed ADB and Proxy Networks",
+  "url": "https://thehackernews.com/2026/01/kimwolf-android-botnet-infects-over-2.html",
+  "content": "The botnet known as Kimwolf has infected more than 2 million Android devices by tunneling through residential proxy networks, according to findings from Synthient.\n\"Key actors involved in the Kimwolf botnet are observed monetizing the botnet through app installs, selling residential proxy bandwidth, and selling its DDoS functionality,\" the company said in an analysis published last week.\nKimwolf",
+  "source": "The Hacker News",
+  "timestamp": "2026-01-05T18:08:41.975Z",
+  "summary": "The Kimwolf botnet has infected over 2 million Android devices via exposed ADB ports and residential proxy networks to facilitate unauthorized app installs and DDoS attacks.",
+  "severity_score": 8.5,
+  "severity_level": "HIGH",
+  "tags": [
+    "Kimwolf",
+    "Android",
+    "Botnet",
+    "ADB",
+    "DDoS"
+  ],
+  "is_analyzed": true
+}
