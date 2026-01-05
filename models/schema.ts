@@ -15,6 +15,7 @@ export interface AnalyzedArticle extends RawArticle {
   severity_score: number; // 1-10
   severity_level: SeverityLevel;
   tags: string[];
+  references?: string[]; // Research papers and authoritative sources
   is_analyzed: boolean;
 }
 

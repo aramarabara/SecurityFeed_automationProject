@@ -76,6 +76,10 @@ export default function App() {
 
   // 3. Draft & Save Final
   const handleDraftSave = (article: AnalyzedArticle) => {
+    const referencesSection = article.references && article.references.length > 0
+      ? `\n## References\n${article.references.map((ref, idx) => `${idx + 1}. ${ref}`).join('\n')}\n`
+      : '';
+
     const draftContent = `
 # ${article.title}
 
@@ -85,9 +89,9 @@ export default function App() {
 **Tags**: ${article.tags.join(', ')}
 
 ## Analysis
-This vulnerability poses a significant risk... (AI Generated Full Body would go here)
+${article.summary}
 
-## Source
+${referencesSection}## Source
 [Read Original](${article.url})
     `;
     
