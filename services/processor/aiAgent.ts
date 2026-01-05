@@ -1,8 +1,9 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { RawArticle, AnalyzedArticle, SeverityLevel } from "../../models/schema";
 
-const GEMINI_API_KEY = process.env.API_KEY || '';
-const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
+// Get API key at runtime to ensure dotenv is loaded
+const getApiKey = () => process.env.API_KEY || process.env.GEMINI_API_KEY || '';
+const getAI = () => new GoogleGenAI({ apiKey: getApiKey() });
 
 // Using Gemini-3-flash for speed and structured output capabilities
 const MODEL_ID = "gemini-3-flash-preview";
@@ -30,10 +31,12 @@ const getLanguageInstruction = (lang: string): string => {
 export class AIAgent {
   
   async analyze(article: RawArticle, targetLanguage: string = 'english'): Promise<AnalyzedArticle> {
-    if (!GEMINI_API_KEY) {
-      throw new Error("API Key missing");
+    const apiKey = getApiKey();
+    if (!apiKey) {
+      throw new Error("API Key missing. Set API_KEY or GEMINI_API_KEY in .env file.");
     }
 
+    const ai = getAI();
     const langInstruction = getLanguageInstruction(targetLanguage);
     
     const prompt = `

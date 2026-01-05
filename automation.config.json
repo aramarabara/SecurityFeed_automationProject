@@ -29,5 +29,19 @@
       "min_severity_for_draft": 7,
       "max_articles_per_run": 5
     }
+  },
+  "vulnerability_scan": {
+    "enabled": true,
+    "github": {
+      "star_range": [100, 1000],
+      "max_repos_per_scan": 3,
+      "keywords_from_articles": true
+    },
+    "codeql": {
+      "enabled": true,
+      "queries": ["security-and-quality"],
+      "timeout_seconds": 300,
+      "runner_type": "cli"
+    }
   }
 }
