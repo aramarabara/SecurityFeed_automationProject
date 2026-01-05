@@ -1,0 +1,25 @@
+{
+  "id": "05b668b9-0f04-44a7-8142-349c42c8c00a",
+  "title": "⚡ Weekly Recap: IoT Exploits, Wallet Breaches, Rogue Extensions, AI Abuse & More",
+  "url": "https://thehackernews.com/2026/01/weekly-recap-iot-exploits-wallet.html",
+  "content": "The year opened without a reset. The same pressure carried over, and in some places it tightened. Systems people assume are boring or stable are showing up in the wrong places. Attacks moved quietly, reused familiar paths, and kept working longer than anyone wants to admit.\nThis week’s stories share one pattern. Nothing flashy. No single moment. Just steady abuse of trust — updates, extensions,",
+  "source": "The Hacker News",
+  "timestamp": "2026-01-05T18:26:44.634Z",
+  "summary": "[Executive Overview] 2024년 초부터 IoT 취약점 악용, 암호화폐 지갑 침해, 악성 브라우저 확장 프로그램 및 AI 오용 등 다각적인 보안 위협이 보고되고 있습니다. 이러한 공격은 단순한 기술적 혁신보다는 사용자가 신뢰하는 기존 시스템의 취약한 연결 고리를 지속적으로 공략하는 특징을 보입니다. 특히 보안 업데이트와 브라우저 환경에 대한 신뢰를 악용하는 사례가 늘어나고 있어 기업 및 개인의 각별한 주의가 요구됩니다. [Threat Analysis] 기술적으로 공격자들은 이미 검증된 공격 경로를 재활용하여 탐지 장벽을 낮추고 있습니다. IoT 장치의 고정된 자격 증명을 이용하거나, 브라우저 확장 프로그램의 과도한 권한을 탈취하여 사용자 데이터를 수집합니다. 또한 생성형 AI를 활용해 피싱 이메일의 정교함을 높여 사회 공학적 공격의 성공률을 극대화하고 있습니다. 이는 공격의 효율성을 높이려는 전략적 접근으로 분석됩니다. [Impact Assessment] 영향 범위는 개인의 금융 자산 탈취부터 기업의 공급망 오염까지 매우 광범위합니다. 특히 암호화폐 지갑 침해는 즉각적인 경제적 손실을 초래하며, 인프라 장비의 취약점 악용은 장기적인 네트워크 침투의 발판이 됩니다. 이는 조직의 운영 연속성을 저해하고 브랜드 신뢰도를 심각하게 훼손하는 결과를 낳을 수 있습니다. [Recommendations] 대응을 위해 모든 IoT 인프라의 펌웨어 보안 패치를 즉시 적용하고, 최소 권한 원칙에 기반한 브라우저 환경 정책을 수립해야 합니다. 지갑 및 중요 계정에는 반드시 하드웨어 기반 다요소 인증(MFA)을 도입해야 합니다. 또한 보안 인식 교육을 강화하여 AI를 이용한 고도화된 사회 공학 공격에 대비하고, 비정상적인 트래픽 감지를 위한 모니터링 체계를 고도화해야 합니다.",
+  "severity_score": 7.5,
+  "severity_level": "HIGH",
+  "tags": [
+    "IoT Exploitation",
+    "Cryptocurrency Theft",
+    "Browser Extension Malice",
+    "AI Misuse",
+    "Supply Chain Risk"
+  ],
+  "references": [
+    "Kumar et al., The Security of Browser Extensions: A Comprehensive Survey, IEEE Access, 2021",
+    "CVE-2024-21887",
+    "MITRE ATT&CK: T1185",
+    "CISA, Shifting the Balance of Cybersecurity Risk: Principles and Approaches for Security-by-Design and -Default, 2023"
+  ],
+  "is_analyzed": true
+}

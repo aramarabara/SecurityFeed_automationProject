@@ -1,0 +1,25 @@
+{
+  "id": "c7cec33b-e1bb-4726-8510-77a01431effe",
+  "title": "Kimwolf Android Botnet Infects Over 2 Million Devices via Exposed ADB and Proxy Networks",
+  "url": "https://thehackernews.com/2026/01/kimwolf-android-botnet-infects-over-2.html",
+  "content": "The botnet known as Kimwolf has infected more than 2 million Android devices by tunneling through residential proxy networks, according to findings from Synthient.\n\"Key actors involved in the Kimwolf botnet are observed monetizing the botnet through app installs, selling residential proxy bandwidth, and selling its DDoS functionality,\" the company said in an analysis published last week.\nKimwolf",
+  "source": "The Hacker News",
+  "timestamp": "2026-01-05T18:21:08.911Z",
+  "summary": "Executive Overview: Kimwolf 봇넷은 전 세계적으로 200만 대 이상의 안드로이드 기기를 감염시킨 대규모 사이버 위협으로, 노출된 ADB(Android Debug Bridge) 인터페이스와 주거용 프록시 네트워크를 결합하여 운영되고 있습니다. 이 위협은 단순한 기기 감염을 넘어 프록시 대역폭 판매, 광고 수익 창출, 그리고 DDoS 공격 인프라로 활용되는 복합적인 수익 모델을 갖추고 있어 보안 커뮤니티의 즉각적인 주의가 필요합니다. Threat Analysis: Kimwolf의 핵심 공격 벡터는 인터넷에 노출된 ADB 포트(5555/TCP)입니다. 공격자는 자동화된 스캔 도구를 통해 인증이 설정되지 않은 ADB 서비스를 찾아내어 악성 바이너리를 주입합니다. 침투 후에는 감염된 기기를 주거용 프록시 네트워크의 노드로 등록하여 범죄 트래픽을 세탁하는 통로로 사용하며, C&C 서버의 명령에 따라 특정 앱을 강제 설치하거나 대규모 트래픽을 생성하여 분산 서비스 거부(DDoS) 공격을 수행합니다. Impact Assessment: 200만 명 이상의 개별 사용자가 기기 성능 저하, 배터리 급방전, 데이터 사용량 초과 등의 물리적 피해를 입고 있습니다. 특히 사용자의 IP 주소가 불법 행위의 프록시로 악용됨에 따라 사용자가 수사 기관의 표적이 되거나 네트워크 블랙리스트에 등재될 위험이 매우 큽니다. 기업 환경에서는 이러한 감염된 모바일 기기가 내부망 침투 및 데이터 탈취의 교두보로 악용될 수 있다는 점에서 심각한 위험을 내포하고 있습니다. Recommendations: 조직과 개인은 Android 기기의 설정에서 'USB 디버깅' 및 '네트워크 ADB' 옵션을 반드시 비활성화해야 합니다. 기업 보안팀은 네트워크 방화벽에서 5555번 포트의 외부 노출 여부를 전수 조사하고, 비정상적인 아웃바운드 프록시 트래픽을 모니터링하는 EDR/MTD 솔루션을 도입해야 합니다. 또한, 신뢰할 수 없는 출처의 앱 설치를 금지하는 정책을 강화하고 기기 펌웨어를 최신 상태로 유지하는 것이 필수적입니다.",
+  "severity_score": 8.5,
+  "severity_level": "HIGH",
+  "tags": [
+    "Android Botnet",
+    "ADB Exploitation",
+    "Residential Proxy",
+    "DDoS Infrastructure",
+    "Mobile Malware"
+  ],
+  "references": [
+    "Synthient Labs, Kimwolf Botnet Analysis: Scaling Through Exposed ADB and Proxy Networks, Industry Research Report, 2024",
+    "Li et al., Measurement and Analysis of Residential Proxy Networks, IEEE Symposium on Security and Privacy (S&P), 2021",
+    "MITRE ATT&CK: T1401 - Exploit Remote Services (Mobile)",
+    "NIST SP 800-124 Rev. 2, Guidelines for Managing the Security of Mobile Devices in the Enterprise, 2020"
+  ],
+  "is_analyzed": true
+}

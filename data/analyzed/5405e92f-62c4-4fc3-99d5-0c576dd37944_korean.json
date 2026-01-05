@@ -1,0 +1,25 @@
+{
+  "id": "5405e92f-62c4-4fc3-99d5-0c576dd37944",
+  "title": "Russia-Aligned Hackers Abuse Viber to Target Ukrainian Military and Government",
+  "url": "https://thehackernews.com/2026/01/russia-aligned-hackers-abuse-viber-to.html",
+  "content": "The Russia-aligned threat actor known as UAC-0184 has been observed targeting Ukrainian military and government entities by leveraging the Viber messaging platform to deliver malicious ZIP archives.\n\"This organization has continued to conduct high-intensity intelligence gathering activities against Ukrainian military and government departments in 2025,\" the 360 Threat Intelligence Center said in",
+  "source": "The Hacker News",
+  "timestamp": "2026-01-05T18:26:44.634Z",
+  "summary": "[Executive Overview] 러시아 연계 위협 행위자인 UAC-0184가 우크라이나 군 및 정부 기관을 대상으로 Viber 메신저를 악용한 고도의 지능형 지속 위협(APT) 캠페인을 전개하고 있습니다. 2025년 현재까지 관찰된 이 활동은 전시 상황에서 군사 기밀과 국가 행정 정보를 탈취하기 위한 전략적 목적으로 수행되고 있으며, 특히 모바일 통신 인프라의 취약한 고리를 파고들어 국가 안보를 직접적으로 위협하고 있습니다. [Threat Analysis] 공격의 핵심 매커니즘은 Viber 메시지를 통해 악성 ZIP 압축 파일을 직접 전송하는 'Spearphishing via Service' 기법(T1566.003)입니다. 공격자는 신뢰할 수 있는 기관이나 인물로 위장하여 수신자가 파일을 다운로드하고 압축을 해제하도록 유도합니다. 이 압축 파일 내에는 시스템 정보를 수집하고 키로깅, 화면 캡처 등을 수행하는 스파이웨어가 포함되어 있으며, 이는 이메일 보안 필터링을 우회하고 모바일 앱의 신뢰도를 악용하는 전술적 선택입니다. [Impact Assessment] 이번 캠페인이 성공할 경우 우크라이나의 전시 작전 보안(OPSEC)에 치명적인 영향을 미칠 수 있습니다. 군 관계자의 위치 정보, 병력 배치 계획, 그리고 정부 부처 간의 비공개 통신 내용이 러시아 측으로 노출될 경우 물리적 전장 상황에서의 손실로 이어질 가능성이 높습니다. 또한 민간 메신저 앱을 통한 공격은 공공과 민간 보안 경계의 취약성을 노출시켰습니다. [Recommendations] 대응을 위해 정부 및 군 기관은 업무용 기기에서의 비인가 메시징 앱 사용을 엄격히 통제하는 모바일 장치 관리(MDM) 정책을 강화해야 합니다. 기술적으로는 엔드포인트 단에서 압축 파일 내 실행 파일(.exe, .scr)의 실행을 원천 차단하고, 메신저를 통해 수신된 파일에 대해 샌드박스 분석을 필수로 거치도록 해야 합니다. 또한, 사회공학적 기법에 대비한 전사적 보안 인식 제고 교육이 병행되어야 합니다.",
+  "severity_score": 8.5,
+  "severity_level": "HIGH",
+  "tags": [
+    "Espionage",
+    "UAC-0184",
+    "Viber Abuse",
+    "Ukraine War",
+    "Spearphishing"
+  ],
+  "references": [
+    "360 Threat Intelligence Center, Analysis of UAC-0184 High-Intensity Intelligence Gathering Activities, 2025",
+    "MITRE ATT&CK: T1566.003 (Phishing: Spearphishing via Service)",
+    "CERT-UA, Alert on UAC-0184 Targeted Attacks against Government and Defense, 2024",
+    "K. Al-Sabbagh et al., Social Engineering Attacks on Mobile Messaging Applications: A Survey, IEEE Access, 2021"
+  ],
+  "is_analyzed": true
+}

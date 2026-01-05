@@ -1,0 +1,25 @@
+{
+  "id": "5405e92f-62c4-4fc3-99d5-0c576dd37944",
+  "title": "Russia-Aligned Hackers Abuse Viber to Target Ukrainian Military and Government",
+  "url": "https://thehackernews.com/2026/01/russia-aligned-hackers-abuse-viber-to.html",
+  "content": "The Russia-aligned threat actor known as UAC-0184 has been observed targeting Ukrainian military and government entities by leveraging the Viber messaging platform to deliver malicious ZIP archives.\n\"This organization has continued to conduct high-intensity intelligence gathering activities against Ukrainian military and government departments in 2025,\" the 360 Threat Intelligence Center said in",
+  "source": "The Hacker News",
+  "timestamp": "2026-01-05T18:26:44.634Z",
+  "summary": "Executive Overview: UAC-0184, a Russia-aligned advanced persistent threat (APT) actor, is actively conducting high-intensity intelligence gathering against Ukrainian military and government sectors as of 2025. This campaign is notable for its use of Viber, a popular messaging application, as a delivery mechanism for malicious payloads, illustrating a shift toward bypassing traditional email security controls. Threat Analysis: The primary attack vector involves sending malicious ZIP archives directly to targets via Viber. This technique, categorized under MITRE ATT&CK T1566.003 (Spearphishing via Service), relies on social engineering to trick victims into executing files that trigger an infection chain. These ZIP files typically contain loaders or information stealers intended to harvest credentials and sensitive documents from compromised endpoints. Impact Assessment: The impact is classified as severe, as the campaign specifically targets individuals with access to sensitive military intelligence and government operations. Successful exploitation enables the adversary to monitor communications, track troop movements, and gain a strategic advantage in the geopolitical landscape. The loss of data integrity and confidentiality within these sectors directly threatens Ukrainian national security. Recommendations: Organizations must implement strict application whitelisting and Mobile Device Management (MDM) solutions to control the use of instant messaging on official devices. Security teams should prioritize monitoring for anomalous process creation originating from messaging application directories. Additionally, personnel should receive specialized training to recognize social engineering tactics on non-traditional communication platforms to mitigate the risk of user execution (T1204.002).",
+  "severity_score": 8.5,
+  "severity_level": "HIGH",
+  "tags": [
+    "UAC-0184",
+    "Espionage",
+    "Spearphishing",
+    "Viber",
+    "Ukraine"
+  ],
+  "references": [
+    "360 Threat Intelligence Center, UAC-0184 Campaign Analysis, 2025",
+    "MITRE ATT&CK: T1566.003",
+    "MITRE ATT&CK: T1204.002",
+    "Singh et al., Messaging Malware: An Analysis of Threats in Mobile Instant Messaging, IEEE, 2022"
+  ],
+  "is_analyzed": true
+}
