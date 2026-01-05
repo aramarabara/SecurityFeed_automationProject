@@ -1,0 +1,19 @@
+{
+  "id": "94d92408-5332-47f6-8138-534704032330",
+  "title": "New VVS Stealer Malware Targets Discord Accounts via Obfuscated Python Code",
+  "url": "https://thehackernews.com/2026/01/new-vvs-stealer-malware-targets-discord.html",
+  "content": "Cybersecurity researchers have disclosed details of a new Python-based information stealer called VVS Stealer (also styled as VVS $tealer) that's capable of harvesting Discord credentials and tokens.\nThe stealer is said to have been on sale on Telegram as far back as April 2025, according to a report from Palo Alto Networks Unit 42.\n\"VVS stealer's code is obfuscated by Pyarmor,\" researchers",
+  "source": "The Hacker News",
+  "timestamp": "2026-01-05T18:00:16.762Z",
+  "summary": "VVS Stealer is a Pyarmor-obfuscated Python malware sold on Telegram that specializes in harvesting Discord credentials and session tokens.",
+  "severity_score": 7.5,
+  "severity_level": "HIGH",
+  "tags": [
+    "VVS Stealer",
+    "Discord",
+    "Infostealer",
+    "Python",
+    "Pyarmor"
+  ],
+  "is_analyzed": true
+}

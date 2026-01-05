@@ -1,0 +1,19 @@
+{
+  "id": "12d21718-f532-4c59-8e3d-6e8ed4aee26c",
+  "title": "⚡ Weekly Recap: IoT Exploits, Wallet Breaches, Rogue Extensions, AI Abuse & More",
+  "url": "https://thehackernews.com/2026/01/weekly-recap-iot-exploits-wallet.html",
+  "content": "The year opened without a reset. The same pressure carried over, and in some places it tightened. Systems people assume are boring or stable are showing up in the wrong places. Attacks moved quietly, reused familiar paths, and kept working longer than anyone wants to admit.\nThis week’s stories share one pattern. Nothing flashy. No single moment. Just steady abuse of trust — updates, extensions,",
+  "source": "The Hacker News",
+  "timestamp": "2026-01-05T18:00:16.761Z",
+  "summary": "The report details a weekly trend of quiet, persistent security threats involving IoT exploits, cryptocurrency wallet breaches, and malicious browser extensions that exploit user trust.",
+  "severity_score": 7.5,
+  "severity_level": "HIGH",
+  "tags": [
+    "IoT security",
+    "crypto wallet breach",
+    "malicious extensions",
+    "AI abuse",
+    "threat recap"
+  ],
+  "is_analyzed": true
+}
