@@ -53,5 +53,7 @@ graph TD
     ```
 4.  Setup Crontab (Example):
     ```bash
-    0 8 * * * cd /path/to/project && /usr/local/bin/node scripts/daily_batch.mjs >> automation.log 2>&1
+    0 8 * * * cd /path/to/project && /usr/local/bin/node scripts/vulnerability_auto_invest.mjs >> automation.log 2>&1
+    0 8 * * * cd /path/to/project && /usr/local/bin/node scripts/vulnerability_scan_corst.mjs >> automation.log 2>&1
+    0 8 * * * cd /path/to/project && /usr/local/bin/node scripts/vulnerability_scan_report.mjs >> automation.log 2>&1
     ```
