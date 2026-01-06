@@ -1,0 +1,31 @@
+{
+  "id": "report-414859063-1767642226300",
+  "repository": {
+    "id": "414859063",
+    "name": "Zero-attacker",
+    "fullName": "AsjadOooO/Zero-attacker",
+    "stars": 894,
+    "language": "Python",
+    "url": "https://github.com/AsjadOooO/Zero-attacker",
+    "description": "Zero-attacker is an multipurpose hacking tool with over 15+ multifunction tools",
+    "keywords": [
+      "android malware",
+      "botnet",
+      "adb exploitation",
+      "residential proxy",
+      "ddos"
+    ],
+    "createdAt": "2021-10-08T05:35:50Z",
+    "updatedAt": "2026-01-04T23:25:58Z",
+    "cloneUrl": "https://github.com/AsjadOooO/Zero-attacker.git"
+  },
+  "vulnerabilities": [],
+  "severity_score": 0,
+  "severity_level": "INFO",
+  "summary": "No security vulnerabilities detected in AsjadOooO/Zero-attacker using CodeQL analysis.",
+  "tags": [
+    "No Vulnerabilities"
+  ],
+  "references": [],
+  "scanTimestamp": "2026-01-05T19:43:46.300Z"
+}

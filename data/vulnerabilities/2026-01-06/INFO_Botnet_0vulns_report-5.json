@@ -1,0 +1,31 @@
+{
+  "id": "report-52956196-1767642218888",
+  "repository": {
+    "id": "52956196",
+    "name": "Botnet",
+    "fullName": "malwares/Botnet",
+    "stars": 934,
+    "language": "C++",
+    "url": "https://github.com/malwares/Botnet",
+    "description": "Botnet",
+    "keywords": [
+      "android malware",
+      "botnet",
+      "adb exploitation",
+      "residential proxy",
+      "ddos"
+    ],
+    "createdAt": "2016-03-02T11:00:36Z",
+    "updatedAt": "2026-01-04T14:25:06Z",
+    "cloneUrl": "https://github.com/malwares/Botnet.git"
+  },
+  "vulnerabilities": [],
+  "severity_score": 0,
+  "severity_level": "INFO",
+  "summary": "No security vulnerabilities detected in malwares/Botnet using CodeQL analysis.",
+  "tags": [
+    "No Vulnerabilities"
+  ],
+  "references": [],
+  "scanTimestamp": "2026-01-05T19:43:38.888Z"
+}

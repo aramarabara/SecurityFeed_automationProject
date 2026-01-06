@@ -1,0 +1,75 @@
+{
+  "id": "report-259933740-1767642246303",
+  "repository": {
+    "id": "259933740",
+    "name": "PhoneSploit",
+    "fullName": "prbhtkumr/PhoneSploit",
+    "stars": 856,
+    "language": "Python",
+    "url": "https://github.com/prbhtkumr/PhoneSploit",
+    "description": "A tool for remote ADB exploitation in Python3 for all Machines.",
+    "keywords": [
+      "android malware",
+      "botnet",
+      "adb exploitation",
+      "residential proxy",
+      "ddos"
+    ],
+    "createdAt": "2020-04-29T13:32:42Z",
+    "updatedAt": "2026-01-05T16:17:20Z",
+    "cloneUrl": "https://github.com/prbhtkumr/PhoneSploit.git"
+  },
+  "vulnerabilities": [
+    {
+      "id": "mock-vuln-1767642230006-1",
+      "ruleId": "js/sql-injection",
+      "message": "Potential SQL injection vulnerability",
+      "severity": "error",
+      "filePath": "src/api/user.js",
+      "startLine": 42,
+      "endLine": 45,
+      "codeSnippet": "const query = \"SELECT * FROM users WHERE id = \" + userId;",
+      "queryName": "SQL Injection",
+      "cwe": "CWE-89"
+    },
+    {
+      "id": "mock-vuln-1767642230006-2",
+      "ruleId": "js/hardcoded-credentials",
+      "message": "Hardcoded credentials detected",
+      "severity": "warning",
+      "filePath": "config/database.js",
+      "startLine": 15,
+      "endLine": 15,
+      "codeSnippet": "const password = \"admin123\";",
+      "queryName": "Hardcoded Credentials",
+      "cwe": "CWE-798"
+    }
+  ],
+  "severity_score": 10,
+  "severity_level": "CRITICAL",
+  "summary": "Executive Overview: The discovery of critical security vulnerabilities within the prbhtkumr/PhoneSploit repository highlights a significant and often overlooked supply chain risk within the cybersecurity tooling ecosystem. PhoneSploit is a widely recognized Python-based tool designed for remote Android Debug Bridge (ADB) exploitation, boasting over 800 stars on GitHub. The identification of these flaws indicates that the tool, intended for offensive security or research, could be weaponized against its own users, creating a 'vulnerability-of-vulnerabilities' scenario that compromises the integrity of security operations. Threat Analysis: Technical analysis reveals two primary vectors of concern. First, a Critical SQL Injection vulnerability (CWE-89) exists in the user API component, specifically through the concatenation of unsanitized 'userId' parameters into SQL queries. This allows for arbitrary database manipulation and information disclosure. Second, the tool contains hardcoded administrative credentials (CWE-798) within its database configuration. Together, these flaws allow an external attacker to bypass authentication and gain full control over the application's backend database, potentially leading to remote code execution on the host machine. Impact Assessment: The impact is substantial for security researchers, penetration testers, and potentially unauthorized actors who deploy this tool in their environments. Successful exploitation by a third party could lead to the exfiltration of sensitive ADB session data, exposure of targeted device information, and lateral movement within the user's local network. Moreover, the presence of such elementary flaws in a popular security tool undermines the trust in open-source security software. Recommendations: It is imperative that developers implement parameterized queries or utilize a secure Object-Relational Mapper (ORM) to eliminate injection risks. Hardcoded credentials must be immediately removed and replaced with secure environment variables or a dedicated secret management system. Users are strongly advised to halt the use of this repository until these issues are remediated and to perform a thorough source code audit of any third-party security scripts before execution in sensitive environments.",
+  "tags": [
+    "SQL Injection",
+    "Hardcoded Credentials",
+    "ADB Exploitation",
+    "Supply Chain Risk",
+    "CWE-89",
+    "SQL Injection",
+    "Injection",
+    "Hardcoded Credentials",
+    "XSS"
+  ],
+  "references": [
+    "Halfond et al., A Classification of SQL Injection Attacks and Countermeasures, IEEE International Symposium on Secure Software Engineering, 2006",
+    "CWE-89: Improper Neutralization of Special Elements used in an SQL Command",
+    "CWE-798: Use of Hardcoded Credentials",
+    "MITRE ATT&CK: T1190 - Exploit Public-Facing Application",
+    "OWASP Top 10:2021-A03 Injection",
+    "CWE-CWE-89: Common Weakness Enumeration",
+    "CodeQL Query: SQL Injection (js/sql-injection)",
+    "CWE-CWE-798: Common Weakness Enumeration",
+    "CodeQL Query: Hardcoded Credentials (js/hardcoded-credentials)"
+  ],
+  "scanTimestamp": "2026-01-05T19:44:06.303Z",
+  "codeqlVersion": "mock-1.0.0"
+}

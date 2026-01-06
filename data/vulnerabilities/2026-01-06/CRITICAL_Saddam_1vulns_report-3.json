@@ -1,0 +1,58 @@
+{
+  "id": "report-31206760-1767642185364",
+  "repository": {
+    "id": "31206760",
+    "name": "Saddam",
+    "fullName": "OffensivePython/Saddam",
+    "stars": 990,
+    "language": "Python",
+    "url": "https://github.com/OffensivePython/Saddam",
+    "description": "DDoS Amplification Tool",
+    "keywords": [
+      "android malware",
+      "botnet",
+      "adb exploitation",
+      "residential proxy",
+      "ddos"
+    ],
+    "createdAt": "2015-02-23T12:15:01Z",
+    "updatedAt": "2026-01-04T11:20:07Z",
+    "cloneUrl": "https://github.com/OffensivePython/Saddam.git"
+  },
+  "vulnerabilities": [
+    {
+      "id": "mock-vuln-1767642176731-1",
+      "ruleId": "js/sql-injection",
+      "message": "Potential SQL injection vulnerability",
+      "severity": "error",
+      "filePath": "src/api/user.js",
+      "startLine": 42,
+      "endLine": 45,
+      "codeSnippet": "const query = \"SELECT * FROM users WHERE id = \" + userId;",
+      "queryName": "SQL Injection",
+      "cwe": "CWE-89"
+    }
+  ],
+  "severity_score": 10,
+  "severity_level": "CRITICAL",
+  "summary": "Executive Overview: The OffensivePython/Saddam repository, a widely recognized tool for executing Distributed Denial of Service (DDoS) amplification attacks, has been identified containing a critical SQL injection vulnerability (CWE-89). While the tool is designed for offensive cyber operations, the presence of this flaw in its API component exposes its operators to significant risk, potentially allowing adversaries to hijack the tool's infrastructure. Threat Analysis: The vulnerability is located in the JavaScript-based API layer (src/api/user.js) where the 'userId' parameter is directly concatenated into a SQL query string. This lack of sanitization allows an attacker to inject arbitrary SQL commands, bypassing authentication and accessing the underlying database. This represents a classic failure in secure coding practices, specifically the failure to use parameterized queries, which is a primary vector for data breaches in web-facing applications. Impact Assessment: The impact is classified as critical because a successful exploit could lead to full database exfiltration, including target lists, configuration data, and potentially administrative credentials. For users of this tool, this vulnerability serves as a 'backdoor' that could be exploited by rival threat actors or law enforcement to identify operators and neutralize offensive infrastructure. Recommendations: Immediate remediation is required by replacing string concatenation with prepared statements or an Object-Relational Mapping (ORM) framework to ensure user input is treated as data rather than executable code. Operators should also implement strict input validation and ensure the API is not exposed to the public internet without robust authentication and network-level access controls.",
+  "tags": [
+    "SQL Injection",
+    "DDoS",
+    "Offensive Security",
+    "CWE-89",
+    "Exploit",
+    "SQL Injection",
+    "Injection"
+  ],
+  "references": [
+    "Halfond et al., A Classification of SQL Injection Attacks and Countermeasures, IEEE International Symposium on Secure Software Engineering, 2006",
+    "MITRE ATT&CK: T1190",
+    "NIST, CWE-89: Improper Neutralization of Special Elements used in an SQL Command, MITRE, 2023",
+    "OWASP, SQL Injection Prevention Cheat Sheet, OWASP Foundation, 2023",
+    "CWE-CWE-89: Common Weakness Enumeration",
+    "CodeQL Query: SQL Injection (js/sql-injection)"
+  ],
+  "scanTimestamp": "2026-01-05T19:43:05.364Z",
+  "codeqlVersion": "mock-1.0.0"
+}

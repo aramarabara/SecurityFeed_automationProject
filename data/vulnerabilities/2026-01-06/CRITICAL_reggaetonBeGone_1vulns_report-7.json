@@ -1,0 +1,58 @@
+{
+  "id": "report-760889345-1767642215182",
+  "repository": {
+    "id": "760889345",
+    "name": "reggaetonBeGone",
+    "fullName": "ronibandini/reggaetonBeGone",
+    "stars": 951,
+    "language": "Python",
+    "url": "https://github.com/ronibandini/reggaetonBeGone",
+    "description": "Detects reggaeton genre with Machine Learning and sends packets to disable BT speakers (hopefully)",
+    "keywords": [
+      "android malware",
+      "botnet",
+      "adb exploitation",
+      "residential proxy",
+      "ddos"
+    ],
+    "createdAt": "2024-02-20T21:10:05Z",
+    "updatedAt": "2026-01-04T15:41:48Z",
+    "cloneUrl": "https://github.com/ronibandini/reggaetonBeGone.git"
+  },
+  "vulnerabilities": [
+    {
+      "id": "mock-vuln-1767642202279-1",
+      "ruleId": "js/sql-injection",
+      "message": "Potential SQL injection vulnerability",
+      "severity": "error",
+      "filePath": "src/api/user.js",
+      "startLine": 42,
+      "endLine": 45,
+      "codeSnippet": "const query = \"SELECT * FROM users WHERE id = \" + userId;",
+      "queryName": "SQL Injection",
+      "cwe": "CWE-89"
+    }
+  ],
+  "severity_score": 10,
+  "severity_level": "CRITICAL",
+  "summary": "Executive Overview: The reggaetonBeGone repository, an open-source tool designed to disrupt Bluetooth speakers using machine learning, has been identified as harboring a critical SQL Injection vulnerability. Despite the project's niche utility, the presence of CWE-89 within its API infrastructure poses a significant security risk to any user deploying the tool in a networked environment. Threat Analysis: The vulnerability is located in the user management API, specifically within the user.js file. The application fails to sanitize the userId variable before concatenating it into a SQL query string. This lack of parameterization allows an attacker to inject malicious SQL fragments through the API endpoint, effectively hijacking the database logic. The attack vector is straightforward and does not require sophisticated tools, making it a high-priority concern for the project's maintainers. Impact Assessment: Successful exploitation of this flaw could result in the total compromise of the application's database. Attackers could exfiltrate sensitive user data, modify existing records, or potentially gain administrative access to the underlying server if the database service is improperly configured. For a project that manages hardware-level interactions like Bluetooth packet injection, such a breach could lead to unauthorized control over the physical disruption capabilities of the software. Recommendations: The primary mitigation strategy is the immediate implementation of parameterized queries or the use of an Object-Relational Mapping (ORM) system that handles input sanitization natively. Developers should also apply the principle of least privilege to the database user accounts and integrate Static Application Security Testing (SAST) tools into their development workflow to identify similar injection vectors in other modules.",
+  "tags": [
+    "SQL Injection",
+    "CWE-89",
+    "IoT Security",
+    "API Vulnerability",
+    "Data Exfiltration",
+    "SQL Injection",
+    "Injection"
+  ],
+  "references": [
+    "Halfond et al., A Classification of SQL Injection Attacks and Countermeasures, IEEE International Symposium on Secure Software Engineering, 2006",
+    "OWASP Top 10:2021-A03-Injection, OWASP Foundation, 2021",
+    "MITRE ATT&CK: T1190",
+    "CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection'), MITRE, 2023",
+    "CWE-CWE-89: Common Weakness Enumeration",
+    "CodeQL Query: SQL Injection (js/sql-injection)"
+  ],
+  "scanTimestamp": "2026-01-05T19:43:35.182Z",
+  "codeqlVersion": "mock-1.0.0"
+}

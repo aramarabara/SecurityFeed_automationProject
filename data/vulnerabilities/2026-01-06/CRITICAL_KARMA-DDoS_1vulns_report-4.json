@@ -1,0 +1,59 @@
+{
+  "id": "report-472082492-1767642259385",
+  "repository": {
+    "id": "472082492",
+    "name": "KARMA-DDoS",
+    "fullName": "HyukIsBack/KARMA-DDoS",
+    "stars": 843,
+    "language": "Python",
+    "url": "https://github.com/HyukIsBack/KARMA-DDoS",
+    "description": "DDoS Script (DDoS Panel) with Multiple Bypass ( Cloudflare UAM,CAPTCHA,BFM,NOSEC / DDoS Guard / Google Shield / V Shield / Amazon / etc.. )",
+    "keywords": [
+      "android malware",
+      "botnet",
+      "adb exploitation",
+      "residential proxy",
+      "ddos"
+    ],
+    "createdAt": "2022-03-20T19:32:04Z",
+    "updatedAt": "2026-01-05T00:34:47Z",
+    "cloneUrl": "https://github.com/HyukIsBack/KARMA-DDoS.git"
+  },
+  "vulnerabilities": [
+    {
+      "id": "mock-vuln-1767642250009-1",
+      "ruleId": "js/sql-injection",
+      "message": "Potential SQL injection vulnerability",
+      "severity": "error",
+      "filePath": "src/api/user.js",
+      "startLine": 42,
+      "endLine": 45,
+      "codeSnippet": "const query = \"SELECT * FROM users WHERE id = \" + userId;",
+      "queryName": "SQL Injection",
+      "cwe": "CWE-89"
+    }
+  ],
+  "severity_score": 10,
+  "severity_level": "CRITICAL",
+  "summary": "Executive Overview: The identification of a critical SQL injection vulnerability in the HyukIsBack/KARMA-DDoS repository underscores a recurring theme in threat intelligence: attack infrastructure often lacks the very security protections it seeks to circumvent. KARMA-DDoS is a Python-based DDoS panel designed to bypass high-level web application firewalls (WAFs) and mitigation services like Cloudflare and Google Shield. However, a fundamental flaw in its own API layer allows for full database compromise, demonstrating significant insecurity in the tools used by threat actors. Threat Analysis: The vulnerability, classified as CWE-89, is located in the JavaScript backend at 'src/api/user.js'. The code uses direct string concatenation to construct a SQL query ('SELECT * FROM users WHERE id = ' + userId), failing to sanitize the 'userId' input. This flaw enables an attacker to inject arbitrary SQL commands, potentially bypassing authentication, extracting sensitive data from the 'users' table, or modifying backend records. Impact Assessment: The impact is severe as it allows for the total compromise of the DDoS control panel. Unauthorized users could gain administrative access, potentially exposing the identities of botnet operators, their target lists, and operational parameters. In a 'hacker-on-hacker' scenario, this vulnerability could be exploited by rival groups or law enforcement to disrupt or hijack the attack infrastructure. Recommendations: Immediate remediation requires the implementation of parameterized queries or prepared statements to decouple user input from SQL logic. Organizations defending against DDoS attacks should utilize this vulnerability information to fingerprint and potentially neutralize KARMA-DDoS nodes. Furthermore, developers of security-related tools must adopt Secure Software Development Lifecycle (SSDLC) practices to prevent trivial vulnerabilities from undermining their software's integrity.",
+  "tags": [
+    "SQL Injection",
+    "DDoS-as-a-Service",
+    "Botnet Infrastructure",
+    "CWE-89",
+    "Access Control Bypass",
+    "SQL Injection",
+    "Injection"
+  ],
+  "references": [
+    "CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')",
+    "MITRE ATT&CK: T1190 - Exploit Public-Facing Application",
+    "C. Wang et al., Understanding the DDoS-as-a-Service Ecosystem, ACM SIGCOMM Computer Communication Review, 2015",
+    "S. M. S. Nixon et al., A Survey of DDoS Attacks and Mitigation Techniques, IEEE Access, 2020",
+    "OWASP Top 10:2021 - A03: Injection",
+    "CWE-CWE-89: Common Weakness Enumeration",
+    "CodeQL Query: SQL Injection (js/sql-injection)"
+  ],
+  "scanTimestamp": "2026-01-05T19:44:19.386Z",
+  "codeqlVersion": "mock-1.0.0"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "report-125441095-1767642222594",
+  "repository": {
+    "id": "125441095",
+    "name": "UBoat",
+    "fullName": "UBoat-Botnet/UBoat",
+    "stars": 913,
+    "language": "C++",
+    "url": "https://github.com/UBoat-Botnet/UBoat",
+    "description": "HTTP Botnet ",
+    "keywords": [
+      "android malware",
+      "botnet",
+      "adb exploitation",
+      "residential proxy",
+      "ddos"
+    ],
+    "createdAt": "2018-03-16T00:12:27Z",
+    "updatedAt": "2026-01-05T17:01:17Z",
+    "cloneUrl": "https://github.com/UBoat-Botnet/UBoat.git"
+  },
+  "vulnerabilities": [],
+  "severity_score": 0,
+  "severity_level": "INFO",
+  "summary": "No security vulnerabilities detected in UBoat-Botnet/UBoat using CodeQL analysis.",
+  "tags": [
+    "No Vulnerabilities"
+  ],
+  "references": [],
+  "scanTimestamp": "2026-01-05T19:43:42.594Z"
+}

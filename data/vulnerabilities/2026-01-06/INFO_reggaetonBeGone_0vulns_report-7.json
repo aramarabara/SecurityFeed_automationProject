@@ -1,0 +1,31 @@
+{
+  "id": "report-760889345-1767643861178",
+  "repository": {
+    "id": "760889345",
+    "name": "reggaetonBeGone",
+    "fullName": "ronibandini/reggaetonBeGone",
+    "stars": 951,
+    "language": "Python",
+    "url": "https://github.com/ronibandini/reggaetonBeGone",
+    "description": "Detects reggaeton genre with Machine Learning and sends packets to disable BT speakers (hopefully)",
+    "keywords": [
+      "android malware",
+      "botnet",
+      "adb exploitation",
+      "residential proxy",
+      "ddos"
+    ],
+    "createdAt": "2024-02-20T21:10:05Z",
+    "updatedAt": "2026-01-04T15:41:48Z",
+    "cloneUrl": "https://github.com/ronibandini/reggaetonBeGone.git"
+  },
+  "vulnerabilities": [],
+  "severity_score": 0,
+  "severity_level": "INFO",
+  "summary": "No security vulnerabilities detected in ronibandini/reggaetonBeGone using CodeQL analysis.",
+  "tags": [
+    "No Vulnerabilities"
+  ],
+  "references": [],
+  "scanTimestamp": "2026-01-05T20:11:01.178Z"
+}

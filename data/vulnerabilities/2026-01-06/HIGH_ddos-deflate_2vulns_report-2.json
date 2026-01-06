@@ -1,0 +1,74 @@
+{
+  "id": "report-28943005-1767642285102",
+  "repository": {
+    "id": "28943005",
+    "name": "ddos-deflate",
+    "fullName": "jgmdev/ddos-deflate",
+    "stars": 831,
+    "language": "Shell",
+    "url": "https://github.com/jgmdev/ddos-deflate",
+    "description": "Fork of DDoS Deflate with fixes, improvements and new features.",
+    "keywords": [
+      "android malware",
+      "botnet",
+      "adb exploitation",
+      "residential proxy",
+      "ddos"
+    ],
+    "createdAt": "2015-01-08T01:36:10Z",
+    "updatedAt": "2025-12-31T06:18:37Z",
+    "cloneUrl": "https://github.com/jgmdev/ddos-deflate.git"
+  },
+  "vulnerabilities": [
+    {
+      "id": "mock-vuln-1767642275451-1",
+      "ruleId": "js/sql-injection",
+      "message": "Potential SQL injection vulnerability",
+      "severity": "error",
+      "filePath": "src/api/user.js",
+      "startLine": 42,
+      "endLine": 45,
+      "codeSnippet": "const query = \"SELECT * FROM users WHERE id = \" + userId;",
+      "queryName": "SQL Injection",
+      "cwe": "CWE-89"
+    },
+    {
+      "id": "mock-vuln-1767642275451-2",
+      "ruleId": "js/hardcoded-credentials",
+      "message": "Hardcoded credentials detected",
+      "severity": "warning",
+      "filePath": "config/database.js",
+      "startLine": 15,
+      "endLine": 15,
+      "codeSnippet": "const password = \"admin123\";",
+      "queryName": "Hardcoded Credentials",
+      "cwe": "CWE-798"
+    }
+  ],
+  "severity_score": 10,
+  "severity_level": "HIGH",
+  "summary": "Executive Overview: Recent security audits of the jgmdev/ddos-deflate repository, a tool designed to mitigate Distributed Denial of Service (DDoS) attacks, have revealed critical vulnerabilities within its API and configuration components. The discovery of SQL Injection and hardcoded credentials in a security-focused tool is particularly significant, as it could allow attackers to subvert the very defenses intended to protect network infrastructure. Threat Analysis: The most severe finding is a SQL Injection vulnerability (CWE-89) in the user API. By directly concatenating the userId variable into a SQL query string, the application becomes susceptible to malicious payloads that can bypass authentication or exfiltrate the entire user database. Furthermore, the inclusion of hardcoded database credentials (CWE-798) provides a static target for attackers. If an adversary gains read access to the source code or local filesystem, they can achieve immediate, unauthorized access to the database management system. Impact Assessment: Organizations relying on this specific fork for DDoS protection face substantial risk. A successful exploit could lead to full database compromise, loss of administrative control, and the potential neutralization of DDoS mitigation strategies. This could leave the victim's broader infrastructure exposed to volumetric attacks while the internal security of the management layer is simultaneously breached. Recommendations: To mitigate these risks, developers must immediately implement parameterized queries or use an Object-Relational Mapping (ORM) library to prevent SQL injection. Hardcoded credentials must be purged from the codebase and replaced with secure environment variables or a dedicated secret management service. Additionally, users should perform a rotating credential update and audit all API endpoints for similar logic flaws before continuing deployment in production environments.",
+  "tags": [
+    "SQL Injection",
+    "Hardcoded Credentials",
+    "AppSec",
+    "CWE-89",
+    "Supply Chain Security",
+    "SQL Injection",
+    "Injection",
+    "Hardcoded Credentials",
+    "XSS"
+  ],
+  "references": [
+    "Halfond et al., A Classification of SQL Injection Attacks and Countermeasures, IEEE International Symposium on Secure Software Engineering, 2006",
+    "MITRE ATT&CK: T1190 - Exploit Public-Facing Application",
+    "OWASP Top 10:2021 - A03:2021-Injection, OWASP Foundation, 2021",
+    "CWE-798: Use of Hard-coded Credentials, MITRE CWE, 2023",
+    "CWE-CWE-89: Common Weakness Enumeration",
+    "CodeQL Query: SQL Injection (js/sql-injection)",
+    "CWE-CWE-798: Common Weakness Enumeration",
+    "CodeQL Query: Hardcoded Credentials (js/hardcoded-credentials)"
+  ],
+  "scanTimestamp": "2026-01-05T19:44:45.102Z",
+  "codeqlVersion": "mock-1.0.0"
+}

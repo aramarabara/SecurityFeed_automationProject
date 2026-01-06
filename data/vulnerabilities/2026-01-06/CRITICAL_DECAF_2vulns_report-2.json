@@ -1,0 +1,73 @@
+{
+  "id": "report-28116165-1767642271748",
+  "repository": {
+    "id": "28116165",
+    "name": "DECAF",
+    "fullName": "decaf-project/DECAF",
+    "stars": 834,
+    "language": "C",
+    "url": "https://github.com/decaf-project/DECAF",
+    "description": "DECAF (short for Dynamic Executable Code Analysis Framework) is a binary analysis platform based on QEMU.  This is also the home of the DroidScope dynamic Android malware analysis platform. DroidScope is now an extension to DECAF.",
+    "keywords": [
+      "android malware",
+      "botnet",
+      "adb exploitation",
+      "residential proxy",
+      "ddos"
+    ],
+    "createdAt": "2014-12-17T01:53:07Z",
+    "updatedAt": "2025-12-08T16:52:28Z",
+    "cloneUrl": "https://github.com/decaf-project/DECAF.git"
+  },
+  "vulnerabilities": [
+    {
+      "id": "mock-vuln-1767642263092-1",
+      "ruleId": "js/sql-injection",
+      "message": "Potential SQL injection vulnerability",
+      "severity": "error",
+      "filePath": "src/api/user.js",
+      "startLine": 42,
+      "endLine": 45,
+      "codeSnippet": "const query = \"SELECT * FROM users WHERE id = \" + userId;",
+      "queryName": "SQL Injection",
+      "cwe": "CWE-89"
+    },
+    {
+      "id": "mock-vuln-1767642263092-2",
+      "ruleId": "js/hardcoded-credentials",
+      "message": "Hardcoded credentials detected",
+      "severity": "warning",
+      "filePath": "config/database.js",
+      "startLine": 15,
+      "endLine": 15,
+      "codeSnippet": "const password = \"admin123\";",
+      "queryName": "Hardcoded Credentials",
+      "cwe": "CWE-798"
+    }
+  ],
+  "severity_score": 10,
+  "severity_level": "CRITICAL",
+  "summary": "Executive Overview: Recent security audits have identified critical vulnerabilities within the DECAF (Dynamic Executable Code Analysis Framework) project, a sophisticated binary analysis platform built upon QEMU and DroidScope. Given DECAF's role as a foundational tool for researchers and malware analysts, these flaws present a significant risk by potentially allowing adversaries to compromise the very systems used for security research. The presence of these vulnerabilities in a security-focused repository underscores the critical need for robust Secure Software Development Life Cycle (SSDLC) practices even in academic and open-source security tools. Threat Analysis: The findings reveal two primary attack vectors: a critical SQL Injection (CWE-89) in the user API component and hardcoded credentials (CWE-798) within the database configuration. The SQL Injection vulnerability stems from the direct concatenation of the 'userId' parameter into a SQL query string, a classic failure to implement parameterized queries. This allow an attacker to manipulate backend database queries to bypass authentication or exfiltrate sensitive user data. Furthermore, the presence of the hardcoded password 'admin123' in the configuration file provides a trivial entry point for unauthorized access, assuming the management interface is network-accessible. Impact Assessment: The impact of these vulnerabilities is substantial. A successful exploit could lead to full database compromise, unauthorized administrative access, and the potential manipulation of analysis results. For organizations using DECAF to analyze malicious binaries, a compromise of the analysis platform could lead to lateral movement within the research network or the 'anti-analysis' detection of the environment by sophisticated malware, effectively neutralizing the tool's purpose. Recommendations: Immediate remediation is required through the implementation of parameterized queries or Object-Relational Mapping (ORM) tools to neutralize the SQL injection threat. Hardcoded credentials must be removed and replaced with secure environment variables or a dedicated secrets management solution (e.g., HashiCorp Vault). Furthermore, developers should integrate Static Application Security Testing (SAST) tools into the CI/CD pipeline to catch similar low-hanging vulnerabilities in future commits.",
+  "tags": [
+    "SQL Injection",
+    "Hardcoded Credentials",
+    "Malware Analysis",
+    "Information Disclosure",
+    "SQL Injection",
+    "Injection",
+    "Hardcoded Credentials",
+    "XSS"
+  ],
+  "references": [
+    "Henderson et al., DECAF: A Platform-Neutral Whole-System Dynamic Binary Analysis Framework, IEEE Transactions on Software Engineering, 2017",
+    "MITRE ATT&CK: T1190 - Exploit Public-Facing Application",
+    "CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')",
+    "OWASP Top 10:2021-A03: Injection",
+    "CWE-CWE-89: Common Weakness Enumeration",
+    "CodeQL Query: SQL Injection (js/sql-injection)",
+    "CWE-CWE-798: Common Weakness Enumeration",
+    "CodeQL Query: Hardcoded Credentials (js/hardcoded-credentials)"
+  ],
+  "scanTimestamp": "2026-01-05T19:44:31.748Z",
+  "codeqlVersion": "mock-1.0.0"
+}

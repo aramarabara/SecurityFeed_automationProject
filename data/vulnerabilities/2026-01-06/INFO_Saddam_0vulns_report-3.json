@@ -1,0 +1,31 @@
+{
+  "id": "report-31206760-1767643842465",
+  "repository": {
+    "id": "31206760",
+    "name": "Saddam",
+    "fullName": "OffensivePython/Saddam",
+    "stars": 990,
+    "language": "Python",
+    "url": "https://github.com/OffensivePython/Saddam",
+    "description": "DDoS Amplification Tool",
+    "keywords": [
+      "android malware",
+      "botnet",
+      "adb exploitation",
+      "residential proxy",
+      "ddos"
+    ],
+    "createdAt": "2015-02-23T12:15:01Z",
+    "updatedAt": "2026-01-04T11:20:07Z",
+    "cloneUrl": "https://github.com/OffensivePython/Saddam.git"
+  },
+  "vulnerabilities": [],
+  "severity_score": 0,
+  "severity_level": "INFO",
+  "summary": "No security vulnerabilities detected in OffensivePython/Saddam using CodeQL analysis.",
+  "tags": [
+    "No Vulnerabilities"
+  ],
+  "references": [],
+  "scanTimestamp": "2026-01-05T20:10:42.465Z"
+}

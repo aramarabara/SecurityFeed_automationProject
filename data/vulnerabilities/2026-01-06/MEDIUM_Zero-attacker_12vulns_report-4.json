@@ -1,0 +1,175 @@
+{
+  "id": "report-414859063-1767643894895",
+  "repository": {
+    "id": "414859063",
+    "name": "Zero-attacker",
+    "fullName": "AsjadOooO/Zero-attacker",
+    "stars": 894,
+    "language": "Python",
+    "url": "https://github.com/AsjadOooO/Zero-attacker",
+    "description": "Zero-attacker is an multipurpose hacking tool with over 15+ multifunction tools",
+    "keywords": [
+      "android malware",
+      "botnet",
+      "adb exploitation",
+      "residential proxy",
+      "ddos"
+    ],
+    "createdAt": "2021-10-08T05:35:50Z",
+    "updatedAt": "2026-01-04T23:25:58Z",
+    "cloneUrl": "https://github.com/AsjadOooO/Zero-attacker.git"
+  },
+  "vulnerabilities": [
+    {
+      "id": "codeql-Zero-attacker-1767643883827-0",
+      "ruleId": "py/clear-text-logging-sensitive-data",
+      "message": "This expression logs [sensitive data (private)](1) as clear text.\nThis expression logs [sensitive data (private)](2) as clear text.",
+      "severity": "warning",
+      "filePath": "Zero-Tool/ip-lookup.py",
+      "startLine": 14,
+      "endLine": 14,
+      "codeSnippet": "",
+      "queryName": "py/clear-text-logging-sensitive-data"
+    },
+    {
+      "id": "codeql-Zero-attacker-1767643883827-1",
+      "ruleId": "py/clear-text-logging-sensitive-data",
+      "message": "This expression logs [sensitive data (private)](1) as clear text.\nThis expression logs [sensitive data (private)](2) as clear text.",
+      "severity": "warning",
+      "filePath": "Zero-Tool/ip-lookup.py",
+      "startLine": 15,
+      "endLine": 15,
+      "codeSnippet": "",
+      "queryName": "py/clear-text-logging-sensitive-data"
+    },
+    {
+      "id": "codeql-Zero-attacker-1767643883827-2",
+      "ruleId": "py/clear-text-logging-sensitive-data",
+      "message": "This expression logs [sensitive data (private)](1) as clear text.\nThis expression logs [sensitive data (private)](2) as clear text.",
+      "severity": "warning",
+      "filePath": "Zero-Tool/ip-lookup.py",
+      "startLine": 16,
+      "endLine": 16,
+      "codeSnippet": "",
+      "queryName": "py/clear-text-logging-sensitive-data"
+    },
+    {
+      "id": "codeql-Zero-attacker-1767643883827-3",
+      "ruleId": "py/clear-text-logging-sensitive-data",
+      "message": "This expression logs [sensitive data (private)](1) as clear text.\nThis expression logs [sensitive data (private)](2) as clear text.",
+      "severity": "warning",
+      "filePath": "Zero-Tool/ip-lookup.py",
+      "startLine": 17,
+      "endLine": 17,
+      "codeSnippet": "",
+      "queryName": "py/clear-text-logging-sensitive-data"
+    },
+    {
+      "id": "codeql-Zero-attacker-1767643883827-4",
+      "ruleId": "py/clear-text-logging-sensitive-data",
+      "message": "This expression logs [sensitive data (private)](1) as clear text.\nThis expression logs [sensitive data (private)](2) as clear text.",
+      "severity": "warning",
+      "filePath": "Zero-Tool/ip-lookup.py",
+      "startLine": 18,
+      "endLine": 18,
+      "codeSnippet": "",
+      "queryName": "py/clear-text-logging-sensitive-data"
+    },
+    {
+      "id": "codeql-Zero-attacker-1767643883827-5",
+      "ruleId": "py/clear-text-logging-sensitive-data",
+      "message": "This expression logs [sensitive data (private)](1) as clear text.\nThis expression logs [sensitive data (private)](2) as clear text.",
+      "severity": "warning",
+      "filePath": "Zero-Tool/ip-lookup.py",
+      "startLine": 19,
+      "endLine": 19,
+      "codeSnippet": "",
+      "queryName": "py/clear-text-logging-sensitive-data"
+    },
+    {
+      "id": "codeql-Zero-attacker-1767643883827-6",
+      "ruleId": "py/clear-text-logging-sensitive-data",
+      "message": "This expression logs [sensitive data (private)](1) as clear text.\nThis expression logs [sensitive data (private)](2) as clear text.\nThis expression logs [sensitive data (private)](2) as clear text.",
+      "severity": "warning",
+      "filePath": "Zero-Tool/phone-locator.py",
+      "startLine": 16,
+      "endLine": 16,
+      "codeSnippet": "",
+      "queryName": "py/clear-text-logging-sensitive-data"
+    },
+    {
+      "id": "codeql-Zero-attacker-1767643883827-7",
+      "ruleId": "py/clear-text-logging-sensitive-data",
+      "message": "This expression logs [sensitive data (private)](1) as clear text.\nThis expression logs [sensitive data (private)](2) as clear text.\nThis expression logs [sensitive data (private)](2) as clear text.",
+      "severity": "warning",
+      "filePath": "Zero-Tool/phone-locator.py",
+      "startLine": 17,
+      "endLine": 17,
+      "codeSnippet": "",
+      "queryName": "py/clear-text-logging-sensitive-data"
+    },
+    {
+      "id": "codeql-Zero-attacker-1767643883827-8",
+      "ruleId": "py/clear-text-logging-sensitive-data",
+      "message": "This expression logs [sensitive data (private)](1) as clear text.\nThis expression logs [sensitive data (private)](2) as clear text.\nThis expression logs [sensitive data (private)](2) as clear text.",
+      "severity": "warning",
+      "filePath": "Zero-Tool/phone-locator.py",
+      "startLine": 18,
+      "endLine": 18,
+      "codeSnippet": "",
+      "queryName": "py/clear-text-logging-sensitive-data"
+    },
+    {
+      "id": "codeql-Zero-attacker-1767643883828-9",
+      "ruleId": "py/clear-text-logging-sensitive-data",
+      "message": "This expression logs [sensitive data (private)](1) as clear text.\nThis expression logs [sensitive data (private)](2) as clear text.\nThis expression logs [sensitive data (private)](2) as clear text.",
+      "severity": "warning",
+      "filePath": "Zero-Tool/phone-locator.py",
+      "startLine": 19,
+      "endLine": 19,
+      "codeSnippet": "",
+      "queryName": "py/clear-text-logging-sensitive-data"
+    },
+    {
+      "id": "codeql-Zero-attacker-1767643883828-10",
+      "ruleId": "py/clear-text-logging-sensitive-data",
+      "message": "This expression logs [sensitive data (private)](1) as clear text.\nThis expression logs [sensitive data (private)](2) as clear text.\nThis expression logs [sensitive data (private)](2) as clear text.",
+      "severity": "warning",
+      "filePath": "Zero-Tool/phone-locator.py",
+      "startLine": 20,
+      "endLine": 20,
+      "codeSnippet": "",
+      "queryName": "py/clear-text-logging-sensitive-data"
+    },
+    {
+      "id": "codeql-Zero-attacker-1767643883828-11",
+      "ruleId": "py/clear-text-logging-sensitive-data",
+      "message": "This expression logs [sensitive data (private)](1) as clear text.\nThis expression logs [sensitive data (private)](2) as clear text.\nThis expression logs [sensitive data (private)](2) as clear text.",
+      "severity": "warning",
+      "filePath": "Zero-Tool/phone-locator.py",
+      "startLine": 21,
+      "endLine": 21,
+      "codeSnippet": "",
+      "queryName": "py/clear-text-logging-sensitive-data"
+    }
+  ],
+  "severity_score": 6.5,
+  "severity_level": "MEDIUM",
+  "summary": "Executive Overview: The 'Zero-attacker' repository, a multi-purpose security and hacking toolkit with significant community traction (894 stars), has been identified as containing multiple security flaws related to insecure data handling. Static analysis revealed 12 instances of clear-text logging of sensitive information within its IP-lookup and phone-locator modules. This highlights a critical oversight in the tool's development where operational telemetry and target PII are exposed in unencrypted formats.\n\nThreat Analysis: The technical root cause is identified by the rule 'py/clear-text-logging-sensitive-data', which corresponds to CWE-532 (Insertion of Sensitive Information into Log File). In the context of Python-based security tools like ip-lookup.py and phone-locator.py, this vulnerability occurs when scripts output raw variables—such as geographic coordinates, service provider details, or target identifiers—directly to the standard output or log files. This lack of data masking or redaction provides a goldmine for local adversaries or forensic tools looking to reconstruct a researcher's activities or steal target data.\n\nImpact Assessment: The impact is primarily categorized as Information Disclosure. Users operating Zero-attacker in shared terminal environments, cloud shells with logging enabled, or compromised workstations risk leaking their targets' private data to unauthorized third parties. Furthermore, for professional penetration testers, such vulnerabilities could lead to a breach of client confidentiality or non-disclosure agreements if the tool's logs are inadvertently archived or shared.\n\nRecommendations: It is strongly recommended that the repository maintainers implement string masking or utilize cryptographic hashing for any PII before it is sent to the logging stream. Users should mitigate risk by executing these tools within ephemeral, isolated environments like Docker containers and ensuring that terminal history or logging buffers are cleared immediately after use. Additionally, an audit of all 15+ multifunction tools within the suite is necessary to identify similar insecure patterns.",
+  "tags": [
+    "Information Leakage",
+    "Python Security",
+    "CWE-532",
+    "Sensitive Data Exposure"
+  ],
+  "references": [
+    "CWE-532: Insertion of Sensitive Information into Log File, MITRE, 2024",
+    "MITRE ATT&CK: T1552.001 - Unsecured Credentials: Information in Files, 2023",
+    "NIST SP 800-92: Guide to Computer Security Log Management, NIST, 2006",
+    "Alqahtani et al., An Analysis of Software Vulnerabilities in Open Source Projects, IEEE, 2021",
+    "OWASP Top 10:2021-A09: Security Logging and Monitoring Failures, OWASP Foundation, 2021",
+    "CodeQL Query: py/clear-text-logging-sensitive-data (py/clear-text-logging-sensitive-data)"
+  ],
+  "scanTimestamp": "2026-01-05T20:11:34.895Z",
+  "codeqlVersion": "mock-1.0.0"
+}
