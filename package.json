@@ -7,7 +7,7 @@
     "start": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "automation:run": "node scripts/daily_batch.mjs",
+    "automation:run": "node scripts/vulnerability_auto_invest.mjs",
     "test:batch": "node scripts/test_batch.mjs",
     "test:vulnerability": "tsx scripts/test_vulnerability_analyzer.ts",
     "scan:vulnerabilities": "tsx scripts/vulnerability_scan.ts",
