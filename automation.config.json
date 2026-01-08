@@ -21,7 +21,7 @@
       },
       {
         "type": "RSS",
-        "url": "https://www.cisa.gov/uscert/ncas/alerts.xml",
+        "url": "https://www.cisa.gov/cybersecurity-advisories/all.xml",
         "name": "CISA US-CERT"
       }
     ],

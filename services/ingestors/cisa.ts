@@ -4,7 +4,7 @@ import { RSSIngestor } from './rss';
 
 export class CISAIngestor implements Ingestor {
   private rssIngestor: RSSIngestor;
-  private static readonly CISA_ALERTS_URL = 'https://www.cisa.gov/uscert/ncas/alerts.xml';
+  private static readonly CISA_ALERTS_URL = 'https://www.cisa.gov/cybersecurity-advisories/all.xml';
 
   constructor() {
     this.rssIngestor = new RSSIngestor();
