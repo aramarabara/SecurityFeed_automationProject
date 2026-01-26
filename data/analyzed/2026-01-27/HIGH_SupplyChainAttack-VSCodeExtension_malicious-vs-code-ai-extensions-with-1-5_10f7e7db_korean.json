@@ -1,0 +1,25 @@
+{
+  "id": "10f7e7db-34aa-4698-93b0-2e6c235e93e6",
+  "title": "Malicious VS Code AI Extensions with 1.5 Million Installs Steal Developer Source Code",
+  "url": "https://thehackernews.com/2026/01/malicious-vs-code-ai-extensions-with-15.html",
+  "content": "Cybersecurity researchers have discovered two malicious Microsoft Visual Studio Code (VS Code) extensions that are advertised as artificial intelligence (AI)-powered coding assistants, but also harbor covert functionality to siphon developer data to China-based servers.\nThe extensions, which have 1.5 million combined installs and are still available for download from the official Visual Studio",
+  "source": "The Hacker News",
+  "timestamp": "2026-01-26T23:11:11.305Z",
+  "severity_score": 8.5,
+  "severity_level": "HIGH",
+  "is_pre_analyzed": true,
+  "summary": "[Executive Overview] 최근 Microsoft Visual Studio Code(VS Code) 마켓플레이스에서 AI 기반 코딩 보조 도구로 위장하여 개발자의 소스 코드를 중국 소재 서버로 탈취하는 악성 확장 프로그램 2종이 발견되었습니다. 150만 건 이상의 누적 설치를 기록한 이들 프로그램은 개발 환경의 신뢰 체인을 직접적으로 공격하는 심각한 공급망 보안 위협으로 간주됩니다. [Threat Analysis] 공격자들은 공식 마켓플레이스의 평판 시스템과 개발자들의 AI 기술에 대한 관심을 악용하여, AI 성능 개선을 명분으로 실시간 코딩 데이터와 환경 변수를 수집합니다. 수집된 정보는 백그라운드에서 은밀한 통신 채널을 통해 중국 내 명령 및 제어(C2) 서버로 전송되며, 이 과정에서 난독화 기술을 사용하여 기존 보안 솔루션의 탐지를 우회하는 정교함을 보였습니다. [Impact Assessment] 이번 공격으로 인해 기업의 핵심 지적 재산인 소스 코드뿐만 아니라, 코드 내에 하드코딩된 API 키, 데이터베이스 자격 증명, 그리고 클라우드 인프라 접근 정보가 대규모로 유출되었을 가능성이 매우 높습니다. 이는 개별 개발자의 피해를 넘어 해당 소프트웨어를 사용하는 수많은 사용자에게 영향을 미치는 대규모 공급망 침해 사고로 번질 수 있습니다. [Recommendations] 조직 보안 담당자는 즉시 마켓플레이스 확장 프로그램의 설치 현황을 전수 조사하고, 검증되지 않은 AI 도구의 사용을 금지하는 화이트리스트 정책을 시행해야 합니다. 또한, 아웃바운드 네트워크 트래픽 모니터링을 통해 비정상적인 데이터 전송을 감지하고, 개발자들에게 비공식 확장 프로그램 사용 시의 위험성을 알리는 보안 인식 교육을 강화해야 합니다.",
+  "tags": [
+    "Supply Chain Attack",
+    "VS Code Extension",
+    "Data Exfiltration",
+    "AI Security"
+  ],
+  "references": [
+    "MITRE ATT&CK: T1195.001",
+    "MITRE ATT&CK: T1041",
+    "Omri Lahav et al., 'Malicious Extensions on Visual Studio Code Marketplace', Check Point Research, 2023",
+    "S. Zimmermann et al., 'Security of the Visual Studio Code Extension Ecosystem', IEEE S&P, 2024"
+  ],
+  "is_analyzed": true
+}
