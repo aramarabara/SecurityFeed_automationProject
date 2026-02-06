@@ -1,0 +1,20 @@
+
+# Compromised dYdX npm and PyPI Packages Deliver Wallet Stealers and RAT Malware
+
+> [Executive Overview] dYdX 프로토콜의 공식 npm 및 PyPI 패키지가 침해되어 지갑 탈취 및 원격 제어 악성코드(RAT)를 유포하는 공급망 공격이 발생했습니다. 이는 오픈소스 생태계의 신뢰를 악용하여 암호화폐 개발자와 사용자 자산을 직접적으로 겨냥한 고도화된 위협입니다. [Threat Analysis] 공격자는 @dydxprotocol/v4-client-js의 특정 버전(3.4.1, 1.22.1, 1.15.2, 1.0.31)에 악성 스크립트를 주입했습니다. 이 코드는 패키지 설치 시 자동으로 실행되어 사용자의 지갑 자격 증명을 탈취하고, 공격자가 원격에서 시스템을 제어할 수 있는 RAT을 설치하도록 설계되었습니다. [Impact Assessment] 해당 패키지를 의존성으로 사용하는 DeFi 프로젝트와 개발 환경은 심각한 보안 위험에 노출되었습니다. 개인키 유출을 통한 자산 손실뿐만 아니라, RAT을 통해 개발자의 워크스테이션이 장악됨으로써 기업 내부망으로의 횡적 이동(Lateral Movement)이 발생할 가능성이 매우 높습니다. [Recommendations] 모든 개발자는 즉시 해당 패키지를 삭제하고 보안이 확인된 최신 버전으로 업데이트해야 합니다. 또한, 침해된 패키지가 설치된 환경에서 사용된 모든 지갑 시드 구문과 API 키를 즉시 무효화하고 재발급해야 하며, SCA(Software Composition Analysis) 도구를 도입하여 종속성 보안을 상시 모니터링할 것을 권고합니다.
+
+**Severity**: CRITICAL (8.5/10)
+**Tags**: Supply Chain Attack, Wallet Stealer, npm/PyPI, RAT, DeFi Security
+
+## Analysis
+[Executive Overview] dYdX 프로토콜의 공식 npm 및 PyPI 패키지가 침해되어 지갑 탈취 및 원격 제어 악성코드(RAT)를 유포하는 공급망 공격이 발생했습니다. 이는 오픈소스 생태계의 신뢰를 악용하여 암호화폐 개발자와 사용자 자산을 직접적으로 겨냥한 고도화된 위협입니다. [Threat Analysis] 공격자는 @dydxprotocol/v4-client-js의 특정 버전(3.4.1, 1.22.1, 1.15.2, 1.0.31)에 악성 스크립트를 주입했습니다. 이 코드는 패키지 설치 시 자동으로 실행되어 사용자의 지갑 자격 증명을 탈취하고, 공격자가 원격에서 시스템을 제어할 수 있는 RAT을 설치하도록 설계되었습니다. [Impact Assessment] 해당 패키지를 의존성으로 사용하는 DeFi 프로젝트와 개발 환경은 심각한 보안 위험에 노출되었습니다. 개인키 유출을 통한 자산 손실뿐만 아니라, RAT을 통해 개발자의 워크스테이션이 장악됨으로써 기업 내부망으로의 횡적 이동(Lateral Movement)이 발생할 가능성이 매우 높습니다. [Recommendations] 모든 개발자는 즉시 해당 패키지를 삭제하고 보안이 확인된 최신 버전으로 업데이트해야 합니다. 또한, 침해된 패키지가 설치된 환경에서 사용된 모든 지갑 시드 구문과 API 키를 즉시 무효화하고 재발급해야 하며, SCA(Software Composition Analysis) 도구를 도입하여 종속성 보안을 상시 모니터링할 것을 권고합니다.
+
+
+## References
+1. Ladisa et al., Taxonomy of Attacks on Open-Source Software Supply Chains, IEEE, 2023
+2. Ohm et al., Backstabber's Knife Collection: A Review of Open Source Software Supply Chain Attacks, USENIX Security, 2020
+3. MITRE ATT&CK: T1195.002 (Supply Chain Compromise: Dependencies and Development Tools)
+4. NIST SP 800-161: Supply Chain Risk Management Practices for Federal Information Systems and Organizations
+## Original Source
+[The Hacker News](https://thehackernews.com/2026/02/compromised-dydx-npm-and-pypi-packages.html)
+    
