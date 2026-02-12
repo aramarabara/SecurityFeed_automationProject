@@ -1,0 +1,20 @@
+
+# ThreatsDay Bulletin: AI Prompt RCE, Claude 0-Click, RenEngine Loader, Auto 0-Days & 25+ Stories
+
+> [Executive Overview] 최근 사이버 보안 지형은 단순한 취약점 공격을 넘어, 신뢰받는 AI 도구와 기존 워크플로우를 악용하는 정교한 방식으로 급격히 변화하고 있습니다. 특히 Claude와 같은 대규모 언어 모델(LLM)을 겨냥한 제로클릭(0-Click) 공격과 프롬프트 주입을 통한 원격 코드 실행(RCE) 기법은 전통적인 경계 보안의 한계를 시사합니다. [Threat Analysis] 공격자들은 RenEngine과 같은 새로운 로더를 사용하여 탐지를 회피하고 있으며, 초기 침투 이후의 권한 상승을 위해 시스템의 기본 기능을 오용하는 'Living off the Land' 전략을 채택하고 있습니다. 특히 AI 프롬프트를 조작하여 시스템의 샌드박스를 탈출하거나 백엔드 서버에서 임의의 코드를 실행하는 방식은 AI 도입 기업에 심각한 위협이 됩니다. [Impact Assessment] 이러한 위협은 AI 서비스를 업무에 통합한 전 세계 기업 및 공공기관에 광범위한 영향을 미칩니다. 자동화된 제로데이 공격 도구의 확산으로 인해 보안 패치가 배포되기 전 민감한 데이터가 유출되거나 기업 인프라가 완전히 장악될 위험이 있으며, 이는 막대한 경제적 손실과 브랜드 이미지 실추로 이어집니다. [Recommendations] 보안 책임자는 LLM에 입력되는 모든 데이터를 잠재적 공격 벡터로 간주하고 강력한 입력값 검증 및 산출물 필터링을 적용해야 합니다. 또한, 엔드포인트 탐지 및 대응(EDR) 시스템을 강화하여 RenEngine과 같은 로더의 비정상적 동작을 모니터링하고, AI 서비스 이용 시 최소 권한 원칙(PoLP)을 철저히 준수할 것을 권고합니다.
+
+**Severity**: HIGH (8.8/10)
+**Tags**: AI Security, RCE, Zero-Click, RenEngine
+
+## Analysis
+[Executive Overview] 최근 사이버 보안 지형은 단순한 취약점 공격을 넘어, 신뢰받는 AI 도구와 기존 워크플로우를 악용하는 정교한 방식으로 급격히 변화하고 있습니다. 특히 Claude와 같은 대규모 언어 모델(LLM)을 겨냥한 제로클릭(0-Click) 공격과 프롬프트 주입을 통한 원격 코드 실행(RCE) 기법은 전통적인 경계 보안의 한계를 시사합니다. [Threat Analysis] 공격자들은 RenEngine과 같은 새로운 로더를 사용하여 탐지를 회피하고 있으며, 초기 침투 이후의 권한 상승을 위해 시스템의 기본 기능을 오용하는 'Living off the Land' 전략을 채택하고 있습니다. 특히 AI 프롬프트를 조작하여 시스템의 샌드박스를 탈출하거나 백엔드 서버에서 임의의 코드를 실행하는 방식은 AI 도입 기업에 심각한 위협이 됩니다. [Impact Assessment] 이러한 위협은 AI 서비스를 업무에 통합한 전 세계 기업 및 공공기관에 광범위한 영향을 미칩니다. 자동화된 제로데이 공격 도구의 확산으로 인해 보안 패치가 배포되기 전 민감한 데이터가 유출되거나 기업 인프라가 완전히 장악될 위험이 있으며, 이는 막대한 경제적 손실과 브랜드 이미지 실추로 이어집니다. [Recommendations] 보안 책임자는 LLM에 입력되는 모든 데이터를 잠재적 공격 벡터로 간주하고 강력한 입력값 검증 및 산출물 필터링을 적용해야 합니다. 또한, 엔드포인트 탐지 및 대응(EDR) 시스템을 강화하여 RenEngine과 같은 로더의 비정상적 동작을 모니터링하고, AI 서비스 이용 시 최소 권한 원칙(PoLP)을 철저히 준수할 것을 권고합니다.
+
+
+## References
+1. Greshake et al., Not What You've Signed Up For: Compromising Real-World LLM Applications via Indirect Prompt Injection, arXiv, 2023
+2. MITRE ATT&CK: T1210
+3. OWASP, Top 10 for Large Language Model Applications v1.1, 2023
+4. CVE-2024-21626
+## Original Source
+[The Hacker News](https://thehackernews.com/2026/02/threatsday-bulletin-ai-prompt-rce.html)
+    
