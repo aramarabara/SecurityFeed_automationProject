@@ -1,0 +1,21 @@
+
+# Google Links China, Iran, Russia, North Korea to Coordinated Defense Sector Cyber Operations
+
+> [Executive Overview] 최근 Google Threat Intelligence Group(GTIG)의 보고서에 따르면 중국, 이란, 러시아, 북한 등 주요 국가 배후 해킹 조직들이 전 세계 국방 산업 기반(DIB) 섹터를 대상으로 고도로 조율된 사이버 작전을 전개하고 있습니다. 이러한 위협은 단순한 정보 탈취를 넘어 국가 안보와 직결되는 군사적 우위를 확보하려는 지정학적 목적을 띄고 있으며, 방위 산업 전반에 걸친 공급망 보안에 심각한 경고등을 울리고 있습니다. [Threat Analysis] 주요 공격 그룹들은 제로데이 취약점 악용, 정교한 사회 공학적 기법, 그리고 공급망 공격(Supply Chain Attack)을 핵심 방법론으로 사용합니다. 북한은 금전적 이익과 기술 탈취를 병행하며, 중국은 장기적 스파이 활동을 통해 차세대 무기 체계 및 기술 사양을 수집합니다. 러시아는 지정학적 긴장에 맞춘 파괴적 공격 및 정보 왜곡 작전을, 이란은 중동 지역 패권 강화를 위한 국방 데이터 수집에 집중하고 있습니다. [Impact Assessment] 공격 성공 시 최첨단 무기 기술 및 지적 재산권(IP)의 대규모 유출로 인해 국가 군사 경쟁력이 훼손될 수 있습니다. 특히 국방 공급망 내의 영세 협력업체들이 공격의 교두보로 활용됨에 따라 산업 생태계 전반의 신뢰성이 저하되며, 실제 전시 상황에서 군사 작전 수행 능력을 저해할 수 있는 치명적인 위협으로 작용할 수 있습니다. [Recommendations] 방위 산업체는 제로 트러스트(Zero Trust) 아키텍처를 도입하여 내부 자산 접근 제어를 강화하고, 소프트웨어 자재 명세서(SBOM)를 통해 공급망 투명성을 확보해야 합니다. 또한 전 직원을 대상으로 한 피싱 방지 교육, 다중 인증(MFA)의 전면 시행, 그리고 위협 인텔리전스(CTI) 기반의 실시간 모니터링 체계를 구축하여 APT 그룹의 최신 TTP에 선제적으로 대응할 것을 강력히 권고합니다.
+
+**Severity**: HIGH (8.5/10)
+**Tags**: APT, Espionage, Defense Sector, Supply Chain Attack, State-Sponsored
+
+## Analysis
+[Executive Overview] 최근 Google Threat Intelligence Group(GTIG)의 보고서에 따르면 중국, 이란, 러시아, 북한 등 주요 국가 배후 해킹 조직들이 전 세계 국방 산업 기반(DIB) 섹터를 대상으로 고도로 조율된 사이버 작전을 전개하고 있습니다. 이러한 위협은 단순한 정보 탈취를 넘어 국가 안보와 직결되는 군사적 우위를 확보하려는 지정학적 목적을 띄고 있으며, 방위 산업 전반에 걸친 공급망 보안에 심각한 경고등을 울리고 있습니다. [Threat Analysis] 주요 공격 그룹들은 제로데이 취약점 악용, 정교한 사회 공학적 기법, 그리고 공급망 공격(Supply Chain Attack)을 핵심 방법론으로 사용합니다. 북한은 금전적 이익과 기술 탈취를 병행하며, 중국은 장기적 스파이 활동을 통해 차세대 무기 체계 및 기술 사양을 수집합니다. 러시아는 지정학적 긴장에 맞춘 파괴적 공격 및 정보 왜곡 작전을, 이란은 중동 지역 패권 강화를 위한 국방 데이터 수집에 집중하고 있습니다. [Impact Assessment] 공격 성공 시 최첨단 무기 기술 및 지적 재산권(IP)의 대규모 유출로 인해 국가 군사 경쟁력이 훼손될 수 있습니다. 특히 국방 공급망 내의 영세 협력업체들이 공격의 교두보로 활용됨에 따라 산업 생태계 전반의 신뢰성이 저하되며, 실제 전시 상황에서 군사 작전 수행 능력을 저해할 수 있는 치명적인 위협으로 작용할 수 있습니다. [Recommendations] 방위 산업체는 제로 트러스트(Zero Trust) 아키텍처를 도입하여 내부 자산 접근 제어를 강화하고, 소프트웨어 자재 명세서(SBOM)를 통해 공급망 투명성을 확보해야 합니다. 또한 전 직원을 대상으로 한 피싱 방지 교육, 다중 인증(MFA)의 전면 시행, 그리고 위협 인텔리전스(CTI) 기반의 실시간 모니터링 체계를 구축하여 APT 그룹의 최신 TTP에 선제적으로 대응할 것을 강력히 권고합니다.
+
+
+## References
+1. Google Threat Intelligence Group, Global Cyber Threat Trends: Defense Industrial Base, 2024
+2. Mandiant, M-Trends 2024: Cyber Security Report, 2024
+3. MITRE ATT&CK: T1195 (Supply Chain Compromise)
+4. CISA, Defending the Defense Industrial Base from Advanced Persistent Threats, 2023
+5. M. N. Johnstone et al., Cybersecurity for the Defense Industrial Base, IEEE Conference on Cyber Warfare, 2022
+## Original Source
+[The Hacker News](https://thehackernews.com/2026/02/google-links-china-iran-russia-north.html)
+    
