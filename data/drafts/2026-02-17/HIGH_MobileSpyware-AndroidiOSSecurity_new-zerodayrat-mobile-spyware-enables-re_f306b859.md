@@ -1,0 +1,21 @@
+
+# New ZeroDayRAT Mobile Spyware Enables Real-Time Surveillance and Data Theft
+
+> [Executive Overview]\nZeroDayRAT은 Telegram을 주요 유통 채널로 활용하는 최신형 모바일 스파이웨어 플랫폼으로, Android와 iOS 기기 모두를 대상으로 하는 광범위한 위협을 가하고 있습니다. 이 플랫폼은 MaaS(Malware-as-a-Service) 비즈니스 모델을 채택하여 전문적인 기술 지원과 지속적인 업데이트를 제공하며, 이는 공격자가 기술적 장벽 없이도 정교한 실시간 감시 캠페인을 수행할 수 있게 합니다. 현대 사회에서 모바일 기기가 차지하는 비중을 고려할 때, 이러한 크로스 플랫폼 스파이웨어의 등장은 개인의 사생활은 물론 기업 보안에 심각한 위협이 됩니다.\n\n[Threat Analysis]\n기술적으로 ZeroDayRAT은 기기의 마이크, 카메라, 실시간 GPS 데이터에 대한 접근 권한을 탈취하여 실시간 도청 및 위치 추적을 수행합니다. 공격자는 Telegram을 명령 및 제어(C2) 서버의 일부로 활용하거나 고객 관리 및 기술 지원의 거점으로 사용하며, 이를 통해 보안 탐지 알고리즘을 우회하는 지능적인 업데이트를 신속하게 배포합니다. 특히 SMS, 연락처, 통화 기록, 애플리케이션 데이터 등 기기에 저장된 거의 모든 민감 정보를 탈취할 수 있는 기능을 보유하고 있으며, 스테이징 기법을 통해 초기 침투 시 탐지 확률을 최소화합니다.\n\n[Impact Assessment]\n이 스파이웨어에 감염될 경우 사용자 개인의 모든 디지털 활동이 노출되어 신원 도용, 금전적 손실, 협박 등의 2차 범죄로 이어질 위험이 큽니다. 기업 환경에서는 임직원의 기기가 감염됨으로써 내부 망 접근 권한이나 핵심 비즈니스 기밀이 유출될 수 있는 치명적인 결과를 초래합니다. MaaS 형태의 배포 방식은 공격의 민주화를 야기하여 타겟팅된 정밀 공격뿐만 아니라 불특정 다수를 향한 대규모 감시 캠페인이 발생할 수 있는 환경을 조성하고 있습니다.\n\n[Recommendations]\n위협을 완화하기 위해서는 사용자 교육과 기술적 방어 체계 구축이 동시에 필요합니다. 사용자는 공식 앱 스토어(Google Play, Apple App Store)가 아닌 비공식 경로를 통한 앱 설치를 절대 지양해야 하며, 신뢰할 수 없는 링크나 메시지에 포함된 첨부 파일을 경계해야 합니다. 조직 차원에서는 MDM(Mobile Device Management) 솔루션을 강화하여 기기 무결성을 실시간으로 확인하고, 제로 트러스트 접근 제어를 통해 비정상적인 데이터 전송을 차단해야 합니다. 또한 모든 모바일 기기의 운영체제를 최신 보안 패치 버전으로 유지하여 알려진 취약점을 통한 침투 시도를 근본적으로 차단해야 합니다.
+
+**Severity**: HIGH (8.5/10)
+**Tags**: Mobile Spyware, Android & iOS Security, Telegram Malware, Data Surveillance, MaaS
+
+## Analysis
+[Executive Overview]\nZeroDayRAT은 Telegram을 주요 유통 채널로 활용하는 최신형 모바일 스파이웨어 플랫폼으로, Android와 iOS 기기 모두를 대상으로 하는 광범위한 위협을 가하고 있습니다. 이 플랫폼은 MaaS(Malware-as-a-Service) 비즈니스 모델을 채택하여 전문적인 기술 지원과 지속적인 업데이트를 제공하며, 이는 공격자가 기술적 장벽 없이도 정교한 실시간 감시 캠페인을 수행할 수 있게 합니다. 현대 사회에서 모바일 기기가 차지하는 비중을 고려할 때, 이러한 크로스 플랫폼 스파이웨어의 등장은 개인의 사생활은 물론 기업 보안에 심각한 위협이 됩니다.\n\n[Threat Analysis]\n기술적으로 ZeroDayRAT은 기기의 마이크, 카메라, 실시간 GPS 데이터에 대한 접근 권한을 탈취하여 실시간 도청 및 위치 추적을 수행합니다. 공격자는 Telegram을 명령 및 제어(C2) 서버의 일부로 활용하거나 고객 관리 및 기술 지원의 거점으로 사용하며, 이를 통해 보안 탐지 알고리즘을 우회하는 지능적인 업데이트를 신속하게 배포합니다. 특히 SMS, 연락처, 통화 기록, 애플리케이션 데이터 등 기기에 저장된 거의 모든 민감 정보를 탈취할 수 있는 기능을 보유하고 있으며, 스테이징 기법을 통해 초기 침투 시 탐지 확률을 최소화합니다.\n\n[Impact Assessment]\n이 스파이웨어에 감염될 경우 사용자 개인의 모든 디지털 활동이 노출되어 신원 도용, 금전적 손실, 협박 등의 2차 범죄로 이어질 위험이 큽니다. 기업 환경에서는 임직원의 기기가 감염됨으로써 내부 망 접근 권한이나 핵심 비즈니스 기밀이 유출될 수 있는 치명적인 결과를 초래합니다. MaaS 형태의 배포 방식은 공격의 민주화를 야기하여 타겟팅된 정밀 공격뿐만 아니라 불특정 다수를 향한 대규모 감시 캠페인이 발생할 수 있는 환경을 조성하고 있습니다.\n\n[Recommendations]\n위협을 완화하기 위해서는 사용자 교육과 기술적 방어 체계 구축이 동시에 필요합니다. 사용자는 공식 앱 스토어(Google Play, Apple App Store)가 아닌 비공식 경로를 통한 앱 설치를 절대 지양해야 하며, 신뢰할 수 없는 링크나 메시지에 포함된 첨부 파일을 경계해야 합니다. 조직 차원에서는 MDM(Mobile Device Management) 솔루션을 강화하여 기기 무결성을 실시간으로 확인하고, 제로 트러스트 접근 제어를 통해 비정상적인 데이터 전송을 차단해야 합니다. 또한 모든 모바일 기기의 운영체제를 최신 보안 패치 버전으로 유지하여 알려진 취약점을 통한 침투 시도를 근본적으로 차단해야 합니다.
+
+
+## References
+1. MITRE ATT&CK: T1430 (Location Tracking)
+2. MITRE ATT&CK: T1512 (Remote Data Transmission)
+3. NIST Special Publication 800-124 Rev. 2, Guidelines for Managing the Security of Mobile Devices in the Enterprise, NIST, 2023
+4. Z. Zhou et al., Dissecting Android Malware: Characterization and Evolution, 2012 IEEE Symposium on Security and Privacy, 2012
+5. CISA, Mobile Device Security Cloud and Hybrid Environments, Cybersecurity Information Guidance, 2021
+## Original Source
+[The Hacker News](https://thehackernews.com/2026/02/new-zerodayrat-mobile-spyware-enables.html)
+    
