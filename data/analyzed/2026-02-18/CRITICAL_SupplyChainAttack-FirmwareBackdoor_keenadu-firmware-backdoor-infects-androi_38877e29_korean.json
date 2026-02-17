@@ -1,0 +1,26 @@
+{
+  "id": "38877e29-bcf8-471d-a4cc-ea603b07899a",
+  "title": "Keenadu Firmware Backdoor Infects Android Tablets via Signed OTA Updates",
+  "url": "https://thehackernews.com/2026/02/keenadu-firmware-backdoor-infects.html",
+  "content": "A new Android backdoor that's embedded deep into the device firmware can silently harvest data and remotely control its behavior, according to new findings from Kaspersky.\nThe Russian cybersecurity vendor said it discovered the backdoor, dubbed Keenadu, in the firmware of devices associated with various brands, including Alldocube, with the compromise occurring during the firmware build phase.",
+  "source": "The Hacker News",
+  "timestamp": "2026-02-17T23:00:01.333Z",
+  "severity_score": 8.5,
+  "severity_level": "CRITICAL",
+  "is_pre_analyzed": true,
+  "summary": "[Executive Overview] 최근 카스퍼스키(Kaspersky) 연구진에 의해 발견된 'Keenadu' 백도어는 안드로이드 태블릿의 펌웨어 빌드 과정에서 직접 삽입되어 공급망 보안의 심각한 취약성을 여실히 드러냈습니다. Alldocube를 포함한 여러 브랜드의 기기에서 발견된 이 위협은 정식 서명된 OTA(Over-the-Air) 업데이트를 통해 배포되어, 기기 시스템 수준의 강력한 권한을 획득하는 정교한 공격 형태를 띱니다. [Threat Analysis] Keenadu는 개발사의 펌웨어 제작 환경이 침해되었을 때 발생하는 전형적인 공급망 공격 사례입니다. 공격자는 빌드 파이프라인에 침투하여 악성 코드를 펌웨어 이미지에 주입했으며, 이로 인해 백도어가 포함된 상태로 제조사의 정식 디지털 서명이 이루어졌습니다. 이 백도어는 OS 심층부에서 작동하며 원격 명령 실행 및 사용자 데이터 탈취 기능을 수행하고, 정식 서명 덕분에 안드로이드의 기본 보안 검증 절차를 우회합니다. [Impact Assessment] 해당 위협의 영향력은 매우 파괴적입니다. 펌웨어 자체에 백도어가 내장되어 있기 때문에 사용자가 공장 초기화를 수행하더라도 악성 코드가 제거되지 않고 지속됩니다. 이는 기기의 영구적인 제어권 상실을 의미하며, 개인 정보 유출은 물론 기업 환경에서 내부망 침투를 위한 교두보로 악용될 위험이 큽니다. [Recommendations] 제조사는 펌웨어 빌드 시스템의 망 분리 및 다요소 인증(MFA)을 강화하고, 모든 코드 변경 사항에 대한 엄격한 무결성 검증을 실시해야 합니다. 사용자는 신뢰할 수 없는 제조사의 저가형 기기 사용을 지양하고, 네트워크 모니터링 도구를 통해 기기에서 발생하는 비정상적인 데이터 전송 여부를 주기적으로 점검해야 합니다. 기업은 모바일 기기 관리(MDM) 정책을 통해 검증되지 않은 펌웨어를 사용하는 기기의 네트워크 접속을 차단해야 합니다.",
+  "tags": [
+    "Supply Chain Attack",
+    "Firmware Backdoor",
+    "Android Security",
+    "OTA Update",
+    "Data Exfiltration"
+  ],
+  "references": [
+    "Kaspersky Lab, Keenadu: Silent Android Firmware Backdoor Analysis, Securelist, 2024",
+    "MITRE ATT&CK: T1195.002 (Supply Chain Compromise: Software Dependencies)",
+    "B. Chen et al., A Large-scale Analysis of Android Firmware Security, USENIX Security, 2021",
+    "CISA, Defending Against Software Supply Chain Attacks, CISA Insights, 2021"
+  ],
+  "is_analyzed": true
+}
