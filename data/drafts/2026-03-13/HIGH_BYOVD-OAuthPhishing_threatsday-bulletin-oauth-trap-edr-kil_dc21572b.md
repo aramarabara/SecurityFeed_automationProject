@@ -1,0 +1,21 @@
+
+# ThreatsDay Bulletin: OAuth Trap, EDR Killer, Signal Phishing, Zombie ZIP, AI Platform Hack & More
+
+> [Executive Overview] 이번 위협 보고서는 현대화된 사회공학적 기법과 고도로 정교해진 보안 솔루션 우회 기술의 융합을 조명합니다. 특히 OAuth 트랩과 EDR Killer와 같은 기술은 조직의 신뢰 관계와 시스템 커널 수준의 취약점을 정밀하게 타격하며, 이는 기존의 경계 보안 체계가 더 이상 안전하지 않음을 시사합니다. [Threat Analysis] 'OAuth Trap' 기법은 악성 앱에 대한 권한 부여를 유도하여 사용자 비밀번호 없이도 클라우드 자원에 영구적으로 접근하는 '일으키는 동의(Illicit Consent)' 방식을 취합니다. 동시에 'EDR Killer' 기술은 취약한 서명 드라이버를 악용하는 BYOVD(Bring Your Own Vulnerable Driver) 공격을 통해 보안 에이전트를 강제 무력화합니다. 'Zombie ZIP'과 같은 파일 조작 기법은 압축 알고리즘의 허점을 이용해 정적 분석 도구를 우회하며 악성 페이로드를 전달합니다. [Impact Assessment] 클라우드 네이티브 환경을 채택한 기업과 고도화된 EDR에 보안을 전적으로 의존하는 조직이 주요 타겟입니다. 공격 성공 시 클라우드 테넌트 전체에 대한 제어권 상실, 암호화된 메신저(Signal)를 통한 내부 데이터 유출, 그리고 AI 플랫폼 내의 민감한 모델 데이터 탈취 등의 심각한 결과를 초래할 수 있습니다. [Recommendations] 조직은 OAuth 애플리케이션의 권한 부여 프로세스를 엄격히 제한하고, 커널 모드 드라이버 서명 정책을 강화하여 인가되지 않은 드라이버 로드를 차단해야 합니다. 또한 파일 스캔 엔진을 최신화하여 비정상적인 ZIP 구조를 탐지하고, AI 인프라에 대해서는 다요소 인증(MFA)과 엔드포인트 격리 전략을 포함한 제로 트러스트 모델을 구현할 것을 권고합니다.
+
+**Severity**: HIGH (8.5/10)
+**Tags**: BYOVD, OAuth Phishing, EDR Evasion, Cloud Security, AI Platform Security
+
+## Analysis
+[Executive Overview] 이번 위협 보고서는 현대화된 사회공학적 기법과 고도로 정교해진 보안 솔루션 우회 기술의 융합을 조명합니다. 특히 OAuth 트랩과 EDR Killer와 같은 기술은 조직의 신뢰 관계와 시스템 커널 수준의 취약점을 정밀하게 타격하며, 이는 기존의 경계 보안 체계가 더 이상 안전하지 않음을 시사합니다. [Threat Analysis] 'OAuth Trap' 기법은 악성 앱에 대한 권한 부여를 유도하여 사용자 비밀번호 없이도 클라우드 자원에 영구적으로 접근하는 '일으키는 동의(Illicit Consent)' 방식을 취합니다. 동시에 'EDR Killer' 기술은 취약한 서명 드라이버를 악용하는 BYOVD(Bring Your Own Vulnerable Driver) 공격을 통해 보안 에이전트를 강제 무력화합니다. 'Zombie ZIP'과 같은 파일 조작 기법은 압축 알고리즘의 허점을 이용해 정적 분석 도구를 우회하며 악성 페이로드를 전달합니다. [Impact Assessment] 클라우드 네이티브 환경을 채택한 기업과 고도화된 EDR에 보안을 전적으로 의존하는 조직이 주요 타겟입니다. 공격 성공 시 클라우드 테넌트 전체에 대한 제어권 상실, 암호화된 메신저(Signal)를 통한 내부 데이터 유출, 그리고 AI 플랫폼 내의 민감한 모델 데이터 탈취 등의 심각한 결과를 초래할 수 있습니다. [Recommendations] 조직은 OAuth 애플리케이션의 권한 부여 프로세스를 엄격히 제한하고, 커널 모드 드라이버 서명 정책을 강화하여 인가되지 않은 드라이버 로드를 차단해야 합니다. 또한 파일 스캔 엔진을 최신화하여 비정상적인 ZIP 구조를 탐지하고, AI 인프라에 대해서는 다요소 인증(MFA)과 엔드포인트 격리 전략을 포함한 제로 트러스트 모델을 구현할 것을 권고합니다.
+
+
+## References
+1. MITRE ATT&CK: T1528 (Steal Application Access Token)
+2. MITRE ATT&CK: T1068 (Exploitation for Privilege Escalation via BYOVD)
+3. CISA Alert AA22-137A: Weak Security Controls and Rogue OAuth Applications
+4. Mandiant, 'Bring Your Own Vulnerable Driver (BYOVD) Attacks on the Rise', 2023
+5. NIST SP 800-204B: Trust Framework for Cloud-Native Applications, 2021
+## Original Source
+[The Hacker News](https://thehackernews.com/2026/03/threatsday-bulletin-oauth-trap-edr.html)
+    
