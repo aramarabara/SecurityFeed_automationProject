@@ -1,0 +1,20 @@
+
+# GlassWorm Supply-Chain Attack Abuses 72 Open VSX Extensions to Target Developers
+
+> [Executive Overview] 최근 GlassWorm 캠페인의 진화된 형태가 발견되었으며, 이는 Open VSX 레지스트리를 이용한 공급망 공격의 심각한 고조를 나타냅니다. 공격자는 개발자들이 일상적으로 사용하는 IDE 확장 프로그램을 매개체로 삼아 조직 내부 망에 침투하려 시도하고 있습니다. [Threat Analysis] 기술적으로 이 공격은 확장 프로그램의 'extensionPack' 및 'extensionDependencies' 속성을 악용하는 것이 특징입니다. 과거에는 악성 로더를 직접 포함시켰으나, 현재는 무해해 보이는 스탠드얼론 확장 프로그램이 설치될 때 전이적 의존성(Transitive Dependencies)을 통해 악성 코드를 자동으로 불러오도록 설계되었습니다. 이러한 방식은 보안 스캐너의 탐지를 우회하고 개발 환경 내에서 신뢰 관계를 역이용합니다. [Impact Assessment] Open VSX 기반의 개발 도구를 사용하는 모든 개발자와 기업이 잠재적 영향권에 있으며, 현재까지 72개의 악성 확장 프로그램이 식별되었습니다. 이를 통해 소스 코드 도난, 자격 증명 탈취, 그리고 개발자 워크스테이션을 거점으로 한 측면 이동(Lateral Movement) 등의 치명적인 결과가 초래될 수 있습니다. [Recommendations] 개발 조직은 비공식 또는 검증되지 않은 레지스트리 사용을 지양하고, 확장 프로그램 설치 시 의존성 트리를 철저히 검사해야 합니다. 또한, IDE 수준의 보안 플러그인을 도입하고 엔드포인트 탐지 및 대응(EDR) 솔루션을 통해 비정상적인 프로세스 실행을 모니터링하는 것이 필수적입니다.
+
+**Severity**: HIGH (7.8/10)
+**Tags**: Supply Chain Attack, Open VSX, VS Code Extensions, GlassWorm, Malware Propagation
+
+## Analysis
+[Executive Overview] 최근 GlassWorm 캠페인의 진화된 형태가 발견되었으며, 이는 Open VSX 레지스트리를 이용한 공급망 공격의 심각한 고조를 나타냅니다. 공격자는 개발자들이 일상적으로 사용하는 IDE 확장 프로그램을 매개체로 삼아 조직 내부 망에 침투하려 시도하고 있습니다. [Threat Analysis] 기술적으로 이 공격은 확장 프로그램의 'extensionPack' 및 'extensionDependencies' 속성을 악용하는 것이 특징입니다. 과거에는 악성 로더를 직접 포함시켰으나, 현재는 무해해 보이는 스탠드얼론 확장 프로그램이 설치될 때 전이적 의존성(Transitive Dependencies)을 통해 악성 코드를 자동으로 불러오도록 설계되었습니다. 이러한 방식은 보안 스캐너의 탐지를 우회하고 개발 환경 내에서 신뢰 관계를 역이용합니다. [Impact Assessment] Open VSX 기반의 개발 도구를 사용하는 모든 개발자와 기업이 잠재적 영향권에 있으며, 현재까지 72개의 악성 확장 프로그램이 식별되었습니다. 이를 통해 소스 코드 도난, 자격 증명 탈취, 그리고 개발자 워크스테이션을 거점으로 한 측면 이동(Lateral Movement) 등의 치명적인 결과가 초래될 수 있습니다. [Recommendations] 개발 조직은 비공식 또는 검증되지 않은 레지스트리 사용을 지양하고, 확장 프로그램 설치 시 의존성 트리를 철저히 검사해야 합니다. 또한, IDE 수준의 보안 플러그인을 도입하고 엔드포인트 탐지 및 대응(EDR) 솔루션을 통해 비정상적인 프로세스 실행을 모니터링하는 것이 필수적입니다.
+
+
+## References
+1. Ohm et al., Backstabber’s Knife Collection: A Review of Open Source Software Supply Chain Attacks, USENIX Security, 2020
+2. MITRE ATT&CK: T1195.002
+3. L Ladani et al., Understanding Malicious Packages in Software Supply Chains, IEEE, 2023
+4. CVE-2023-51417
+## Original Source
+[The Hacker News](https://thehackernews.com/2026/03/glassworm-supply-chain-attack-abuses-72.html)
+    
