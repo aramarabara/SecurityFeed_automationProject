@@ -1,0 +1,26 @@
+{
+  "id": "e82afc04-5c2a-4ca0-9ca7-a01a3851317f",
+  "title": "AI Flaws in Amazon Bedrock, LangSmith, and SGLang Enable Data Exfiltration and RCE",
+  "url": "https://thehackernews.com/2026/03/ai-flaws-in-amazon-bedrock-langsmith.html",
+  "content": "Cybersecurity researchers have disclosed details of a new method for exfiltrating sensitive data from artificial intelligence (AI) code execution environments using domain name system (DNS) queries.\nIn a report published Monday, BeyondTrust revealed that Amazon Bedrock AgentCore Code Interpreter's sandbox mode permits outbound DNS queries that an attacker can exploit to enable interactive shells",
+  "source": "The Hacker News",
+  "timestamp": "2026-03-17T23:00:01.634Z",
+  "severity_score": 8.5,
+  "severity_level": "HIGH",
+  "is_pre_analyzed": true,
+  "summary": "Executive Overview: 최근 Amazon Bedrock AgentCore, LangSmith, 및 SGLang과 같은 주요 AI 에이전트 및 코드 실행 환경에서 심각한 보안 결함이 발견되었습니다. BeyondTrust 연구팀이 공개한 이 취약점은 AI 코드 해석을 위해 제공되는 샌드박스 환경이 외부 DNS 쿼리를 제한 없이 허용함으로써 발생하는 구조적 문제입니다. Threat Analysis: 공격자는 AI 실행 환경 내에서 DNS를 은닉 채널(Covert Channel)로 사용하여 데이터를 유출할 수 있습니다. 예를 들어, 민감한 데이터를 서브도메인으로 인코딩하여 공격자가 제어하는 DNS 서버로 쿼리를 보냄으로써 기존 네트워크 보안 장비를 우회합니다. 특히 Amazon Bedrock의 특정 설정에서는 이를 통해 대화형 쉘을 획득하고 원격 코드 실행(RCE)까지 가능함이 확인되었습니다. Impact Assessment: 이 취약점은 AI를 활용해 코드를 작성하거나 분석하는 엔터프라이즈 환경에 심각한 영향을 미칩니다. 공격자는 기업의 소스 코드, API 자격 증명, 고객 데이터 등을 탈취할 수 있으며, 관리형 서비스의 샌드박스를 탈출하여 내부 인프라로 침투할 수 있는 발판을 마련할 수 있습니다. Recommendations: 조직은 AI 샌드박스 환경에서 외부로 나가는 모든 트래픽에 대해 엄격한 송신 필터링(Egress Filtering)을 적용해야 합니다. DNS 트래픽 모니터링 및 비정상적인 길이의 도메인 요청에 대한 탐지 체계를 강화하고, AI 모델 실행 시 네트워크가 격리된 에어갭(Air-gap) 형태의 실행 환경을 구축하는 것이 권고됩니다.",
+  "tags": [
+    "AI Security",
+    "DNS Exfiltration",
+    "Remote Code Execution",
+    "Cloud Security",
+    "Sandbox Escape"
+  ],
+  "references": [
+    "MITRE ATT&CK: T1071.004 (Application Layer Protocol: DNS)",
+    "BeyondTrust, 'Exfiltrating Data via DNS in AI Code Execution Environments', Industry Report, 2024",
+    "Greshake et al., 'Not What You've Signed Up For: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection', arXiv, 2023",
+    "MITRE ATT&CK: T1048.003 (Exfiltration Over Alternative Protocol)"
+  ],
+  "is_analyzed": true
+}
