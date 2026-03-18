@@ -1,0 +1,26 @@
+{
+  "id": "ce92c22a-1294-49e5-b2ef-413f8da5c784",
+  "title": "9 Critical IP KVM Flaws Enable Unauthenticated Root Access Across Four Vendors",
+  "url": "https://thehackernews.com/2026/03/9-critical-ip-kvm-flaws-enable.html",
+  "content": "Cybersecurity researchers have warned about the risks posed by low-cost IP KVM (Keyboard, Video, Mouse over Internet Protocol) devices, which can grant attackers extensive control over compromised hosts.\nThe nine vulnerabilities, discovered by Eclypsium, span four different products from GL-iNet Comet RM-1, Angeet/Yeeso ES3 KVM, Sipeed NanoKVM, and JetKVM. The most severe of them allow",
+  "source": "The Hacker News",
+  "timestamp": "2026-03-18T23:00:06.846Z",
+  "severity_score": 9.8,
+  "severity_level": "CRITICAL",
+  "is_pre_analyzed": true,
+  "summary": "[Executive Overview] 최근 Eclypsium 연구원들이 GL-iNet, Angeet, Sipeed, JetKVM 등 4개 주요 제조사의 저가형 IP KVM(Keyboard, Video, Mouse over IP) 장치에서 9개의 치명적인 보안 취약점을 발견했습니다. IP KVM 장치는 서버의 물리적 콘솔에 대한 원격 접근을 제공하는 핵심 관리 도구로, 이번 취약점은 공격자가 인증 없이도 타겟 시스템의 루트(Root) 권한을 획득할 수 있게 합니다. 이는 하드웨어 수준의 제어권을 탈취당하는 것과 같으며, 원격 관리 인프라의 신뢰성을 근본적으로 위협하는 중대한 사안입니다. [Threat Analysis] 기술적으로 이 취약점들은 웹 인터페이스 및 API 설계 결함으로 인해 발생하며, 공격자는 특수하게 조작된 요청을 통해 인증 과정을 우회할 수 있습니다. 일단 루트 권한을 획득하면 공격자는 가상 미디어를 마운트하여 임의의 ISO 파일로 부팅하거나, BIOS 및 펌웨어를 수정하여 운영체제 수준의 보안 컨트롤을 무력화할 수 있습니다. 특히 이러한 공격은 하드웨어 단에서 이루어지므로 일반적인 백신이나 EDR(Endpoint Detection and Response) 솔루션의 탐지 범위를 벗어난다는 점이 가장 위험합니다. [Impact Assessment] 이번 위협은 중소기업의 데이터 센터부터 대규모 클라우드 인프라, 원격 관리 환경에 이르기까지 광범위한 영향을 미칩니다. 공격자가 시스템을 장악할 경우 민감한 데이터 탈취는 물론, 랜섬웨어 유포를 위한 교두보로 활용하거나 펌웨어 변조를 통해 지속적인 백도어를 심을 수 있습니다. 또한, 물리적 서버 제어권이 상실됨에 따라 시스템을 복구 불가능한 상태로 만드는 파괴적 공격도 가능해져 비즈니스 연속성에 심각한 타격을 줄 수 있습니다. [Recommendations] 대응 방안으로 기업은 IP KVM 관리 인터페이스를 공용 인터넷에서 즉시 격리하고, 에어갭(Air-gap) 환경 또는 전용 관리 네트워크(OOB) 내에서만 운영해야 합니다. 또한, 관리자 계정에 대해 강력한 다요소 인증(MFA)을 적용하고 IP 화이트리스팅을 통해 접근 권한을 엄격히 제한해야 합니다. 마지막으로, Eclypsium과 제조사에서 권고하는 보안 패치 및 최신 펌웨어를 즉각 검토하고 업데이트를 실시하여 잠재적인 침투 경로를 차단할 것을 강력히 권고합니다.",
+  "tags": [
+    "IP KVM",
+    "Root Access",
+    "Supply Chain Security",
+    "Firmware Vulnerability",
+    "Remote Management"
+  ],
+  "references": [
+    "Eclypsium, 'Below the OS: The Risks of Low-Cost IP KVMs', Industry Report, 2024",
+    "MITRE ATT&CK: T1190 - Exploit Public-Facing Application",
+    "NIST SP 800-193, 'Platform Firmware Resiliency Guidelines', NIST, 2018",
+    "MITRE ATT&CK: T1495 - Firmware Corruption"
+  ],
+  "is_analyzed": true
+}
