@@ -1,0 +1,21 @@
+
+# Magento PolyShell Flaw Enables Unauthenticated Uploads, RCE and Account Takeover
+
+> [Executive Overview] Magento의 REST API에서 발견된 'PolyShell' 취약점은 인증되지 않은 공격자가 시스템 권한을 획득할 수 있게 하는 매우 치명적인 보안 결함입니다. Sansec이 보고한 이 위협은 공격자가 이미지로 위장한 악성 스크립트를 업로드하여 원격 코드 실행(RCE)을 가능하게 하며, 이는 전 세계 Magento 기반 이커머스 플랫폼에 심각한 위협이 됩니다. [Threat Analysis] 기술적으로 이 취약점은 'Polyglot' 파일 기법을 활용합니다. 공격자는 이미지 파일 구조 내에 PHP와 같은 실행 코드를 은닉하며, API의 업로드 로직이 파일의 실제 내용을 충분히 검증하지 않는 점을 이용합니다. 이를 통해 공격자는 보안 필터링을 우회하고 서버에서 임의의 명령을 실행할 수 있는 웹쉘을 설치하여 영구적인 접근 권한을 확보합니다. [Impact Assessment] 이 취약점의 영향도는 극도로 높습니다. 공격자는 데이터베이스에 접근하여 고객의 민감한 결제 카드 정보(PCI 데이터) 및 개인 식별 정보(PII)를 탈취할 수 있으며, 관리자 계정을 탈취하여 상점의 모든 운영 권한을 장악할 수 있습니다. 이는 단순한 데이터 유출을 넘어 브랜드 신뢰도 하락과 막대한 법적 책임으로 이어질 수 있습니다. [Recommendations] 모든 관리자는 즉시 Adobe Commerce 및 Magento Open Source의 최신 보안 패치를 적용해야 합니다. 또한, REST API 엔드포인트에 대한 접근 제어를 강화하고, 업로드된 파일이 저장되는 디렉토리에서 스크립트 실행 권한을 제거하는 'No-Execute' 설정을 적용해야 합니다. WAF를 통한 실시간 트래픽 모니터링 역시 필수적인 방어 계층입니다.
+
+**Severity**: CRITICAL (9.8/10)
+**Tags**: RCE, Magento, API Security, Polyglot File, Account Takeover
+
+## Analysis
+[Executive Overview] Magento의 REST API에서 발견된 'PolyShell' 취약점은 인증되지 않은 공격자가 시스템 권한을 획득할 수 있게 하는 매우 치명적인 보안 결함입니다. Sansec이 보고한 이 위협은 공격자가 이미지로 위장한 악성 스크립트를 업로드하여 원격 코드 실행(RCE)을 가능하게 하며, 이는 전 세계 Magento 기반 이커머스 플랫폼에 심각한 위협이 됩니다. [Threat Analysis] 기술적으로 이 취약점은 'Polyglot' 파일 기법을 활용합니다. 공격자는 이미지 파일 구조 내에 PHP와 같은 실행 코드를 은닉하며, API의 업로드 로직이 파일의 실제 내용을 충분히 검증하지 않는 점을 이용합니다. 이를 통해 공격자는 보안 필터링을 우회하고 서버에서 임의의 명령을 실행할 수 있는 웹쉘을 설치하여 영구적인 접근 권한을 확보합니다. [Impact Assessment] 이 취약점의 영향도는 극도로 높습니다. 공격자는 데이터베이스에 접근하여 고객의 민감한 결제 카드 정보(PCI 데이터) 및 개인 식별 정보(PII)를 탈취할 수 있으며, 관리자 계정을 탈취하여 상점의 모든 운영 권한을 장악할 수 있습니다. 이는 단순한 데이터 유출을 넘어 브랜드 신뢰도 하락과 막대한 법적 책임으로 이어질 수 있습니다. [Recommendations] 모든 관리자는 즉시 Adobe Commerce 및 Magento Open Source의 최신 보안 패치를 적용해야 합니다. 또한, REST API 엔드포인트에 대한 접근 제어를 강화하고, 업로드된 파일이 저장되는 디렉토리에서 스크립트 실행 권한을 제거하는 'No-Execute' 설정을 적용해야 합니다. WAF를 통한 실시간 트래픽 모니터링 역시 필수적인 방어 계층입니다.
+
+
+## References
+1. Sansec, "PolyShell: Unauthenticated RCE in Magento", Sansec Threat Research, 2024
+2. CVE-2024-34102
+3. MITRE ATT&CK: T1190
+4. MITRE ATT&CK: T1505.003
+5. CISA, "Adobe Releases Security Updates for Adobe Commerce and Magento Open Source", 2024
+## Original Source
+[The Hacker News](https://thehackernews.com/2026/03/magento-polyshell-flaw-enables.html)
+    
