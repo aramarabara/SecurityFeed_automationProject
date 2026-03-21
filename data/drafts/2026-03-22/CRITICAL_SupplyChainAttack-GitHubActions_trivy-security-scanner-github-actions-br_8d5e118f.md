@@ -1,0 +1,20 @@
+
+# Trivy Security Scanner GitHub Actions Breached, 75 Tags Hijacked to Steal CI/CD Secrets
+
+> [Executive Overview] Aqua Security에서 유지 관리하는 인기 오픈소스 취약점 스캐너인 Trivy의 GitHub Actions 리포지토리가 한 달 사이 두 번째로 침해되는 사고가 발생했습니다. 이번 공격은 'aquasecurity/trivy-action' 및 'aquasecurity/setup-trivy'의 75개 태그를 하이재킹하여 CI/CD 환경의 민감한 비밀 정보를 탈취하도록 설계된 악성 코드를 주입한 정교한 공급망 공격입니다. [Threat Analysis] 공격자는 GitHub 리포지토리의 태그 관리 권한을 악용하여 기존의 정상적인 태그들을 악성 스크립트가 포함된 버전으로 교체했습니다. 워크플로우가 실행될 때, 삽입된 악성 코드는 환경 변수(Environment Variables)에 저장된 AWS 액세스 키, GitHub 토큰, API 시크릿 등을 수집하여 외부 C2 서버로 전송합니다. 이는 정상적인 보안 점검 도구를 악성 데이터 유출 도구로 변질시킨 공격 방식입니다. [Impact Assessment] Docker 이미지 스캐닝 및 워크플로우 구성을 위해 해당 Actions를 사용하는 모든 개발자와 기업이 영향을 받습니다. 특히 75개의 광범위한 태그가 수정되었기 때문에, 고정된 버전을 사용하던 사용자들도 무의식적으로 악성 버전을 실행했을 가능성이 높습니다. 유출된 시크릿을 통해 공격자는 클라우드 인프라에 무단 침입하거나 추가적인 소스 코드 변조를 수행할 수 있습니다. [Recommendations] 즉각적인 조치로 영향을 받은 Actions의 사용을 중단하고 최신 보안 패치가 적용된 버전으로 업데이트해야 합니다. 또한, CI/CD에서 사용된 모든 시크릿을 즉시 무효화하고 재발급(Rotation)해야 합니다. 향후 유사 공격 방지를 위해 태그 이름(예: v1.0) 대신 변경 불가능한 커밋 해시(SHA)를 참조하여 의존성을 고정하는 보안 실무를 권장합니다.
+
+**Severity**: CRITICAL (8.8/10)
+**Tags**: Supply Chain Attack, GitHub Actions, Secrets Theft, CI/CD Security, Trivy
+
+## Analysis
+[Executive Overview] Aqua Security에서 유지 관리하는 인기 오픈소스 취약점 스캐너인 Trivy의 GitHub Actions 리포지토리가 한 달 사이 두 번째로 침해되는 사고가 발생했습니다. 이번 공격은 'aquasecurity/trivy-action' 및 'aquasecurity/setup-trivy'의 75개 태그를 하이재킹하여 CI/CD 환경의 민감한 비밀 정보를 탈취하도록 설계된 악성 코드를 주입한 정교한 공급망 공격입니다. [Threat Analysis] 공격자는 GitHub 리포지토리의 태그 관리 권한을 악용하여 기존의 정상적인 태그들을 악성 스크립트가 포함된 버전으로 교체했습니다. 워크플로우가 실행될 때, 삽입된 악성 코드는 환경 변수(Environment Variables)에 저장된 AWS 액세스 키, GitHub 토큰, API 시크릿 등을 수집하여 외부 C2 서버로 전송합니다. 이는 정상적인 보안 점검 도구를 악성 데이터 유출 도구로 변질시킨 공격 방식입니다. [Impact Assessment] Docker 이미지 스캐닝 및 워크플로우 구성을 위해 해당 Actions를 사용하는 모든 개발자와 기업이 영향을 받습니다. 특히 75개의 광범위한 태그가 수정되었기 때문에, 고정된 버전을 사용하던 사용자들도 무의식적으로 악성 버전을 실행했을 가능성이 높습니다. 유출된 시크릿을 통해 공격자는 클라우드 인프라에 무단 침입하거나 추가적인 소스 코드 변조를 수행할 수 있습니다. [Recommendations] 즉각적인 조치로 영향을 받은 Actions의 사용을 중단하고 최신 보안 패치가 적용된 버전으로 업데이트해야 합니다. 또한, CI/CD에서 사용된 모든 시크릿을 즉시 무효화하고 재발급(Rotation)해야 합니다. 향후 유사 공격 방지를 위해 태그 이름(예: v1.0) 대신 변경 불가능한 커밋 해시(SHA)를 참조하여 의존성을 고정하는 보안 실무를 권장합니다.
+
+
+## References
+1. Ohm et al., Backstabber’s Knife Collection: A Review of Open Source Software Supply Chain Attacks, USENIX Security, 2020
+2. MITRE ATT&CK: T1195.002 (Supply Chain Compromise: Compromise Software Dependencies)
+3. MITRE ATT&CK: T1552.001 (Unsecured Credentials: Credentials In Files)
+4. CISA, Defending Against Software Supply Chain Attacks, CISA-NSA-ODNI Advisory, 2021
+## Original Source
+[The Hacker News](https://thehackernews.com/2026/03/trivy-security-scanner-github-actions.html)
+    
