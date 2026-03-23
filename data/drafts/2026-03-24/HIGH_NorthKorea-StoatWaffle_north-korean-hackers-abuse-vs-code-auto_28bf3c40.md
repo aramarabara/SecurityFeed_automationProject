@@ -1,0 +1,33 @@
+
+# North Korean Hackers Abuse VS Code Auto-Run Tasks to Deploy StoatWaffle Malware
+
+> [Executive Overview] 북한 배후의 위협 그룹인 WaterPlum(일명 Contagious Interview)이 소프트웨어 개발자를 겨냥하여 Visual Studio Code(VS Code)의 기능을 악용한 새로운 공격 캠페인을 전개하고 있습니다. 이들은 가짜 구인 인터뷰를 미끼로 개발자에게 악성 프로젝트를 전달하며, 최종적으로 StoatWaffle이라 불리는 정교한 멀웨어를 배포하여 시스템 권한을 탈취합니다.
+
+[Threat Analysis] 기술적으로 이 공격은 VS Code의 'tasks.json' 설정 파일을 악용합니다. 공격자는 이 파일 내에 프로젝트가 열릴 때 특정 스크립트가 자동 실행되도록 정의하며, 사용자가 프로젝트를 '신뢰할 수 있는 워크스페이스'로 허용하는 순간 StoatWaffle 페이로드가 다운로드 및 실행됩니다. StoatWaffle은 C2 서버와 통신하며 정찰, 추가 모듈 로드, 시스템 정보 유출 등 전형적인 스파이웨어 및 백도어 기능을 수행합니다.
+
+[Impact Assessment] 주요 타겟은 금융, 암호화폐 및 고도화된 기술 개발 분야의 종사자입니다. 개발 환경이 침해될 경우 기업의 핵심 지적 재산권인 소스 코드가 유출될 수 있을 뿐만 아니라, 개발자의 높은 시스템 권한을 이용한 내부망 침투 및 공급망 공격(Supply Chain Attack)으로 확산될 위험이 매우 큽니다.
+
+[Recommendations] 조직 내 보안 관리자는 VS Code의 'Workspace Trust' 기능을 강제하고, 출처가 불분명한 외부 프로젝트의 자동 실행 기능을 비활성화해야 합니다. 또한, EDR 솔루션을 통해 개발 도구에서 생성되는 비정상적인 자식 프로세스(예: powershell.exe, curl.exe)를 실시간 모니터링하고, 개발자를 대상으로 소셜 엔지니어링 기반의 가짜 인터뷰 공격에 대한 보안 인식 교육을 강화해야 합니다.
+
+**Severity**: HIGH (8.2/10)
+**Tags**: North Korea, StoatWaffle, Supply Chain Attack, VS Code, Social Engineering
+
+## Analysis
+[Executive Overview] 북한 배후의 위협 그룹인 WaterPlum(일명 Contagious Interview)이 소프트웨어 개발자를 겨냥하여 Visual Studio Code(VS Code)의 기능을 악용한 새로운 공격 캠페인을 전개하고 있습니다. 이들은 가짜 구인 인터뷰를 미끼로 개발자에게 악성 프로젝트를 전달하며, 최종적으로 StoatWaffle이라 불리는 정교한 멀웨어를 배포하여 시스템 권한을 탈취합니다.
+
+[Threat Analysis] 기술적으로 이 공격은 VS Code의 'tasks.json' 설정 파일을 악용합니다. 공격자는 이 파일 내에 프로젝트가 열릴 때 특정 스크립트가 자동 실행되도록 정의하며, 사용자가 프로젝트를 '신뢰할 수 있는 워크스페이스'로 허용하는 순간 StoatWaffle 페이로드가 다운로드 및 실행됩니다. StoatWaffle은 C2 서버와 통신하며 정찰, 추가 모듈 로드, 시스템 정보 유출 등 전형적인 스파이웨어 및 백도어 기능을 수행합니다.
+
+[Impact Assessment] 주요 타겟은 금융, 암호화폐 및 고도화된 기술 개발 분야의 종사자입니다. 개발 환경이 침해될 경우 기업의 핵심 지적 재산권인 소스 코드가 유출될 수 있을 뿐만 아니라, 개발자의 높은 시스템 권한을 이용한 내부망 침투 및 공급망 공격(Supply Chain Attack)으로 확산될 위험이 매우 큽니다.
+
+[Recommendations] 조직 내 보안 관리자는 VS Code의 'Workspace Trust' 기능을 강제하고, 출처가 불분명한 외부 프로젝트의 자동 실행 기능을 비활성화해야 합니다. 또한, EDR 솔루션을 통해 개발 도구에서 생성되는 비정상적인 자식 프로세스(예: powershell.exe, curl.exe)를 실시간 모니터링하고, 개발자를 대상으로 소셜 엔지니어링 기반의 가짜 인터뷰 공격에 대한 보안 인식 교육을 강화해야 합니다.
+
+
+## References
+1. MITRE ATT&CK: T1204.002 (User Execution: Malicious File)
+2. Palo Alto Networks Unit 42, North Korean Hackers Abuse VS Code Tasks, Industry Report, 2024
+3. Trend Micro, The Contagious Interview Campaign and WaterPlum Tactics, Research Paper, 2024
+4. CVE-2023-36742 (Related VS Code RCE contexts)
+5. CISA AA24-109A: North Korean State-Sponsored Cyber Actors Use Social Engineering to Target Professionals, 2024
+## Original Source
+[The Hacker News](https://thehackernews.com/2026/03/north-korean-hackers-abuse-vs-code-auto.html)
+    
