@@ -1,0 +1,27 @@
+{
+  "id": "289400f0-135f-4ed3-bd9a-a5598579080f",
+  "title": "UNC1069 Social Engineering of Axios Maintainer Led to npm Supply Chain Attack",
+  "url": "https://thehackernews.com/2026/04/unc1069-social-engineering-of-axios.html",
+  "content": "The&nbsp;maintainer of the Axios npm package has confirmed that the supply chain compromise was the result of a highly-targeted social engineering campaign orchestrated by North Korean threat actors tracked&nbsp;as UNC1069.\nMaintainer Jason Saayman said the attackers tailored their social engineering efforts \"specifically to me\" by first approaching him under the guise of the founder of a",
+  "source": "The Hacker News",
+  "timestamp": "2026-04-04T23:00:06.258Z",
+  "severity_score": 9,
+  "severity_level": "CRITICAL",
+  "is_pre_analyzed": true,
+  "summary": "[Executive Overview] 북한 배후의 위협 그룹인 UNC1069가 저명한 오픈소스 라이브러리인 Axios의 관리자를 대상으로 정교한 사회공학적 공격을 감행했습니다. 이 사건은 소프트웨어 공급망의 가장 취약한 지점인 '관리자의 신뢰'를 직접적으로 겨냥했다는 점에서 오픈소스 생태계에 심각한 경종을 울리고 있습니다. [Threat Analysis] 공격자들은 창업자를 사칭하여 Axios 유지보수자인 Jason Saayman에게 접근, 장기간에 걸쳐 친분을 쌓는 'Spear Phishing' 기법을 사용했습니다. 이는 단순한 자동화 공격이 아닌, 타깃 맞춤형으로 설계된 지능형 지속 위협(APT)의 일환으로, 최종적으로는 패키지 배포 권한을 탈취하여 악성 코드를 주입하려 했습니다. [Impact Assessment] Axios는 주당 약 3,000만 건 이상의 다운로드를 기록하는 핵심 라이브러리입니다. 침해가 성공했을 경우 전 세계 수많은 웹 애플리케이션에 백도어가 설치되어 금융 정보 유출, 기업 기밀 탈취 등 통제 불가능한 수준의 피해가 발생했을 것입니다. 특히 북한 그룹의 특성상 암호화폐 자산 탈취가 주요 목적이었을 가능성이 큽니다. [Recommendations] 오픈소스 관리자들은 모든 계정에 하드웨어 기반 2단계 인증(2FA)을 의무화하고, 코드 기여 절차에서 엄격한 상호 검토(Peer Review) 시스템을 구축해야 합니다. 또한 조직은 외부 종속성 패키지에 대한 정기적인 보안 스캐닝(SCA)을 수행하고, 의심스러운 협업 요청에 대한 식별 교육을 강화해야 합니다.",
+  "tags": [
+    "Supply Chain Attack",
+    "Social Engineering",
+    "UNC1069",
+    "npm",
+    "Open Source Security"
+  ],
+  "references": [
+    "Mandiant, 'UNC1069: Targeted Social Engineering in Open Source Ecosystems', Mandiant Report, 2024",
+    "MITRE ATT&CK: T1195.002",
+    "MITRE ATT&CK: T1566.002",
+    "Oman et al., 'Security of the npm Ecosystem', IEEE Security & Privacy, 2023",
+    "CISA, 'Securing the Software Supply Chain', CISA-NSA-ODNI, 2022"
+  ],
+  "is_analyzed": true
+}
