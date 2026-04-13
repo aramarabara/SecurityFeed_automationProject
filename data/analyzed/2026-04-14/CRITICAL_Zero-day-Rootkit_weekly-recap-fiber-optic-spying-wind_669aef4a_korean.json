@@ -1,0 +1,27 @@
+{
+  "id": "669aef4a-71cb-48cc-aaaf-b5b6bb7b5e53",
+  "title": "⚡ Weekly Recap: Fiber Optic Spying, Windows Rootkit, AI Vulnerability Hunting and More",
+  "url": "https://thehackernews.com/2026/04/weekly-recap-fiber-optic-spying-windows.html",
+  "content": "Monday&nbsp;is back, and the weekend’s backlog of chaos is officially hitting the fan. We&nbsp;are tracking a critical zero-day that has been quietly living in your PDFs for months, plus some aggressive state-sponsored meddling in infrastructure that is finally coming to light. It&nbsp;is one of those mornings where the gap between a quiet shift and a full-blown incident response is basically",
+  "source": "The Hacker News",
+  "timestamp": "2026-04-13T23:00:05.984Z",
+  "severity_score": 8.5,
+  "severity_level": "CRITICAL",
+  "is_pre_analyzed": true,
+  "summary": "[Executive Overview] 최근 보고된 사이버 위협 동향은 PDF 제로데이 취약점과 국가 지원 해킹 그룹의 인프라 공격을 중심으로 급격히 전개되고 있습니다. 특히 수개월간 탐지되지 않은 채 암약해온 PDF 취약점은 일상적인 문서 공유가 고도의 공격 벡터로 활용될 수 있음을 경고하며, 광케이블 도청 및 윈도우 루트킷과 같은 물리 계층과 커널 계층을 넘나드는 공격은 국가적 차원의 정교한 감시 체계가 실전 배치되었음을 시사합니다.\n\n[Threat Analysis] 기술적으로 이번 위협은 다층적인 구조를 가집니다. PDF 제로데이는 문서 내장 스크립트 엔진이나 폰트 렌더링 라이브러리의 결함을 악용하여 사용자 개입 시 즉각적인 임의 코드 실행(RCE)을 유도합니다. 윈도우 루트킷은 OS 커널 깊숙이 침투하여 보안 소프트웨어의 탐지망을 우회하며 장기적인 지속성(Persistence)을 확보합니다. 특히 광케이블 도청은 물리적 신호의 미세한 누설을 포착하는 기법을 통해 논리적 보안 레이어를 무력화하며, AI 기술이 공격자의 취약점 발굴 도구로 사용되면서 위협의 생성 속도가 비약적으로 향상되었습니다.\n\n[Impact Assessment] 이러한 공격은 정부 기관 및 핵심 인프라 운영사뿐만 아니라 일반 기업 환경에도 치명적인 영향을 미칩니다. 커널 수준의 권한 탈취는 조직 내 모든 데이터에 대한 접근권을 부여하며, 물리적 인프라에 대한 간섭은 국가 안보와 직결된 통신 기밀성을 근본적으로 훼손합니다. AI를 활용한 취약점 사냥은 방어자가 대응책을 마련하기 전 공격이 수행되는 '제로데이 창(Window of Vulnerability)'을 심화시켜 전례 없는 동시다발적 침해 사고를 유발할 수 있습니다.\n\n[Recommendations] 조직은 최우선적으로 PDF 뷰어와 같은 서드파티 소프트웨어의 최신 패치를 적용하고 샌드박싱 기능을 강화해야 합니다. 루트킷 탐지를 위해 엔드포인트 탐지 및 대응(EDR) 솔루션의 무결성 검사 기능을 활성화하고, 광통신 구간에는 전송 계층 암호화 및 물리적 무결성 모니터링을 도입해야 합니다. 또한, AI 기반 보안 분석 도구를 방어 전략에 편입하여 공격자의 속도에 대응하는 능동적 방어 체계(Proactive Defense)를 구축하는 것이 필수적입니다.",
+  "tags": [
+    "Zero-day",
+    "Rootkit",
+    "Critical Infrastructure",
+    "PDF Exploitation",
+    "AI Security"
+  ],
+  "references": [
+    "MITRE ATT&CK: T1014 (Rootkit)",
+    "CISA, PRC State-Sponsored Cyber Activity Targeting Infrastructure (AA24-038A), 2024",
+    "Mohamadali et al., Fiber Optic Eavesdropping: Attacks and Defenses, IEEE Communications Surveys & Tutorials, 2023",
+    "CVE-2023-36025 (Windows Bypass Vulnerability)",
+    "CrowdStrike, Global Threat Report: The Year of the Stealthy Adversary, 2024"
+  ],
+  "is_analyzed": true
+}
