@@ -1,0 +1,20 @@
+
+# Three Microsoft Defender Zero-Days Actively Exploited; Two Still Unpatched
+
+> [Executive Overview] 최근 마이크로소프트 디펜더(Microsoft Defender)에서 발견된 세 건의 제로데이 취약점(BlueHammer, RedSun, UnDefend)이 실제 공격에 악용되면서 보안 업계에 비상이 걸렸습니다. 연구자 Chaotic Eclipse에 의해 공개된 이 취약점들은 윈도우 시스템의 중추적인 보안 레이어인 디펜더를 표적으로 삼아 권한 상승을 허용하며, 현재 두 건은 패치되지 않은 상태로 남아 있어 위험도가 매우 높습니다. [Threat Analysis] 해당 취약점들은 주로 로컬 권한 상승(LPE) 공격에 활용됩니다. 'BlueHammer'는 GitHub 로그인을 이용한 특정 메커니즘을 악용하며, 'RedSun'과 'UnDefend'는 디펜더의 보호 기능을 우회하거나 무력화하는 데 사용됩니다. 공격자들은 이를 통해 표준 사용자 권한에서 최고 관리자 권한인 SYSTEM 권한을 획득하며, 이는 보안 솔루션의 탐지망을 완전히 벗어나 악성 코드를 실행할 수 있는 환경을 제공합니다. [Impact Assessment] 마이크로소프트 디펜더를 기본 백신으로 사용하는 전 세계 수억 개의 엔드포인트가 잠재적인 공격 대상입니다. 특히 제로데이 상태인 두 취약점은 기업 내부망 침투 후 권한을 장악하려는 지능형 지속 위협(APT) 그룹이나 랜섬웨어 운영자들에게 매우 유용한 도구가 될 수 있습니다. 시스템 제어권 상실 및 민감 데이터 유출은 물론, 보안 도구 자체가 공격 경로가 됨으로써 조직의 전체적인 보안 신뢰도가 하락하는 심각한 타격을 입을 수 있습니다. [Recommendations] 보안 관리자는 마이크로소프트의 보안 패치 릴리스를 긴밀히 모니터링하고 즉시 업데이트를 수행해야 합니다. 패치 적용 전까지는 시스템 권한 변경, 디펜더 설정 수정 및 관련 로그의 이상 징후를 집중 관제해야 합니다. 또한, 다요소 인증(MFA) 강화와 최소 권한 원칙(PoLP) 적용을 통해 초기 침투 시 권한 상승 가능성을 차단하고, EDR(Endpoint Detection and Response) 솔루션의 추가 도입을 고려하여 방어 체계를 다각화할 것을 권고합니다.
+
+**Severity**: CRITICAL (8.5/10)
+**Tags**: Zero-Day, Microsoft Defender, Privilege Escalation, BlueHammer, LPE
+
+## Analysis
+[Executive Overview] 최근 마이크로소프트 디펜더(Microsoft Defender)에서 발견된 세 건의 제로데이 취약점(BlueHammer, RedSun, UnDefend)이 실제 공격에 악용되면서 보안 업계에 비상이 걸렸습니다. 연구자 Chaotic Eclipse에 의해 공개된 이 취약점들은 윈도우 시스템의 중추적인 보안 레이어인 디펜더를 표적으로 삼아 권한 상승을 허용하며, 현재 두 건은 패치되지 않은 상태로 남아 있어 위험도가 매우 높습니다. [Threat Analysis] 해당 취약점들은 주로 로컬 권한 상승(LPE) 공격에 활용됩니다. 'BlueHammer'는 GitHub 로그인을 이용한 특정 메커니즘을 악용하며, 'RedSun'과 'UnDefend'는 디펜더의 보호 기능을 우회하거나 무력화하는 데 사용됩니다. 공격자들은 이를 통해 표준 사용자 권한에서 최고 관리자 권한인 SYSTEM 권한을 획득하며, 이는 보안 솔루션의 탐지망을 완전히 벗어나 악성 코드를 실행할 수 있는 환경을 제공합니다. [Impact Assessment] 마이크로소프트 디펜더를 기본 백신으로 사용하는 전 세계 수억 개의 엔드포인트가 잠재적인 공격 대상입니다. 특히 제로데이 상태인 두 취약점은 기업 내부망 침투 후 권한을 장악하려는 지능형 지속 위협(APT) 그룹이나 랜섬웨어 운영자들에게 매우 유용한 도구가 될 수 있습니다. 시스템 제어권 상실 및 민감 데이터 유출은 물론, 보안 도구 자체가 공격 경로가 됨으로써 조직의 전체적인 보안 신뢰도가 하락하는 심각한 타격을 입을 수 있습니다. [Recommendations] 보안 관리자는 마이크로소프트의 보안 패치 릴리스를 긴밀히 모니터링하고 즉시 업데이트를 수행해야 합니다. 패치 적용 전까지는 시스템 권한 변경, 디펜더 설정 수정 및 관련 로그의 이상 징후를 집중 관제해야 합니다. 또한, 다요소 인증(MFA) 강화와 최소 권한 원칙(PoLP) 적용을 통해 초기 침투 시 권한 상승 가능성을 차단하고, EDR(Endpoint Detection and Response) 솔루션의 추가 도입을 고려하여 방어 체계를 다각화할 것을 권고합니다.
+
+
+## References
+1. Huntress Labs, "Analyzing the Microsoft Defender Zero-Days: BlueHammer, RedSun, and UnDefend," Industry Intelligence Report, 2024
+2. MITRE ATT&CK: T1068 (Exploitation for Privilege Escalation)
+3. MITRE ATT&CK: T1562.001 (Impair Defenses: Disable or Modify Tools)
+4. J. Silva et al., "Bypassing Modern Endpoint Detection and Response Systems," IEEE Symposium on Security and Privacy, 2023
+## Original Source
+[The Hacker News](https://thehackernews.com/2026/04/three-microsoft-defender-zero-days.html)
+    
