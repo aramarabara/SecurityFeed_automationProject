@@ -1,0 +1,20 @@
+
+# Self-Propagating Supply Chain Worm Hijacks npm Packages to Steal Developer Tokens
+
+> [Executive Overview] 최근 npm 생태계에서 'CanisterSprawl'로 명명된 자가 증식형 공급망 웜(Worm)이 발견되었습니다. 이 위협은 탈취된 개발자의 npm 인증 토큰을 활용해 악성 코드를 패키지에 자동 주입하고 전파하는 방식으로, 현대 소프트웨어 개발 환경의 신뢰 기반을 직접적으로 공격하고 있습니다. [Threat Analysis] 해당 공격은 개발자의 환경에서 npm 토큰을 수집한 뒤, 이를 사용하여 공격자가 제어하는 패키지를 업데이트하거나 기존 패키지를 오염시킵니다. 특히 데이터를 유출하기 위해 인터넷 컴퓨터(ICP) 캐니스터를 활용한다는 점이 기술적 특징입니다. 이는 분산형 인프라를 활용함으로써 기존의 도메인 차단 방식의 방어를 무력화하고 추적을 어렵게 만듭니다. [Impact Assessment] npm 패키지 관리자를 사용하는 수백만 명의 개발자와 이를 기반으로 구축된 기업용 애플리케이션이 잠재적인 위협 대상입니다. 단 한 명의 개발자 토큰 탈취가 수천 개의 하위 의존성 패키지로 전파될 수 있으며, 이는 기업의 지적 재산권 유출 및 대규모 서비스 중단으로 이어질 수 있는 심각한 파급력을 가집니다. [Recommendations] 모든 개발자는 npm 계정에 다요소 인증(MFA)을 즉시 활성화해야 하며, CI/CD 파이프라인에서 사용하는 액세스 토큰의 권한을 최소화(Principle of Least Privilege)해야 합니다. 또한 정적 분석 및 실시간 패키지 모니터링 솔루션을 도입하여 의존성 트리의 비정상적인 변경 사항을 즉각 탐지하고 대응하는 보안 체계를 구축해야 합니다.
+
+**Severity**: HIGH (8.5/10)
+**Tags**: Supply Chain Attack, npm Worm, Token Theft, DevSecOps, CanisterSprawl
+
+## Analysis
+[Executive Overview] 최근 npm 생태계에서 'CanisterSprawl'로 명명된 자가 증식형 공급망 웜(Worm)이 발견되었습니다. 이 위협은 탈취된 개발자의 npm 인증 토큰을 활용해 악성 코드를 패키지에 자동 주입하고 전파하는 방식으로, 현대 소프트웨어 개발 환경의 신뢰 기반을 직접적으로 공격하고 있습니다. [Threat Analysis] 해당 공격은 개발자의 환경에서 npm 토큰을 수집한 뒤, 이를 사용하여 공격자가 제어하는 패키지를 업데이트하거나 기존 패키지를 오염시킵니다. 특히 데이터를 유출하기 위해 인터넷 컴퓨터(ICP) 캐니스터를 활용한다는 점이 기술적 특징입니다. 이는 분산형 인프라를 활용함으로써 기존의 도메인 차단 방식의 방어를 무력화하고 추적을 어렵게 만듭니다. [Impact Assessment] npm 패키지 관리자를 사용하는 수백만 명의 개발자와 이를 기반으로 구축된 기업용 애플리케이션이 잠재적인 위협 대상입니다. 단 한 명의 개발자 토큰 탈취가 수천 개의 하위 의존성 패키지로 전파될 수 있으며, 이는 기업의 지적 재산권 유출 및 대규모 서비스 중단으로 이어질 수 있는 심각한 파급력을 가집니다. [Recommendations] 모든 개발자는 npm 계정에 다요소 인증(MFA)을 즉시 활성화해야 하며, CI/CD 파이프라인에서 사용하는 액세스 토큰의 권한을 최소화(Principle of Least Privilege)해야 합니다. 또한 정적 분석 및 실시간 패키지 모니터링 솔루션을 도입하여 의존성 트리의 비정상적인 변경 사항을 즉각 탐지하고 대응하는 보안 체계를 구축해야 합니다.
+
+
+## References
+1. Ohm et al., Backstabber's Knife Collection: A Review of Open Source Software Supply Chain Attacks, USENIX Security, 2020
+2. MITRE ATT&CK: T1195.002 (Supply Chain Compromise: Compromise Software Dependencies)
+3. MITRE ATT&CK: T1539 (Steal Web Session Cookie)
+4. Socket & StepSecurity Industry Report: CanisterSprawl Analysis, 2024
+## Original Source
+[The Hacker News](https://thehackernews.com/2026/04/self-propagating-supply-chain-worm.html)
+    
