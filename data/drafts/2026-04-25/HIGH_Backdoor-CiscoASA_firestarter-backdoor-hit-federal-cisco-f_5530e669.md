@@ -1,0 +1,33 @@
+
+# FIRESTARTER Backdoor Hit Federal Cisco Firepower Device, Survives Security Patches
+
+> [Executive Overview] 2025년 9월, 미국 사이버보안 및 인프라 보안국(CISA)은 미 연방 민감 기관의 Cisco Firepower 장비가 'FIRESTARTER'로 명명된 정교한 백도어에 감염되었음을 공식 발표했습니다. 이 위협은 단순한 침해를 넘어 보안 패치 적용 후에도 시스템 내에서 생존하는 강력한 영속성(Persistence)을 특징으로 하며, 국가 지원 해킹 그룹의 고도화된 공격 수법을 보여주는 중대한 보안 사례로 평가됩니다.
+
+[Threat Analysis] FIRESTARTER 백도어는 Cisco ASA(Adaptive Security Appliance) 소프트웨어의 취약점을 악용하여 설치됩니다. 기술 분석에 따르면, 이 악성코드는 시스템 펌웨어나 부팅 영역의 구성 요소를 변조함으로써 일반적인 소프트웨어 업데이트 및 보안 패치 설치 과정에서도 제거되지 않고 상주할 수 있습니다. 이는 공격자에게 지속적인 원격 접근 권한을 부여하며, 네트워크 경계 장비를 내부망 침투를 위한 전략적 교두보로 활용하게 합니다.
+
+[Impact Assessment] 이번 침해 사고는 연방 기관의 통신 데이터 보안과 내부 인프라의 신뢰성을 직접적으로 위협합니다. 방화벽과 같은 네트워크 장비는 엔드포인트 탐지 및 대응(EDR) 도구의 가시성에서 벗어나 있는 경우가 많아, 공격자는 장기간 탐지되지 않고 기밀 정보를 탈취하거나 네트워크 트래픽을 가로챌 수 있습니다. 패치를 통한 복구가 어렵다는 점은 침해 사고 대응에 막대한 비용과 시간을 소요하게 만듭니다.
+
+[Recommendations] 보안 관리자는 장비의 무결성 검증 기능을 활용하여 비정상적인 실행 파일이나 구성 변경을 주기적으로 확인해야 합니다. 관리 인터페이스에 대한 접근을 엄격히 제한하고 다요소 인증(MFA)을 필수적으로 도입해야 하며, 하드웨어 수준의 공장 초기화(Factory Reset) 또는 펌웨어 재설치를 포함한 포괄적인 복구 계획을 수립해야 합니다. 또한, CISA와 NCSC의 최신 위협 지표(IoC)를 모니터링 시스템에 반영할 것을 권고합니다.
+
+**Severity**: HIGH (8.5/10)
+**Tags**: Backdoor, Cisco ASA, Persistence, Network Infrastructure, CISA Advisory
+
+## Analysis
+[Executive Overview] 2025년 9월, 미국 사이버보안 및 인프라 보안국(CISA)은 미 연방 민감 기관의 Cisco Firepower 장비가 'FIRESTARTER'로 명명된 정교한 백도어에 감염되었음을 공식 발표했습니다. 이 위협은 단순한 침해를 넘어 보안 패치 적용 후에도 시스템 내에서 생존하는 강력한 영속성(Persistence)을 특징으로 하며, 국가 지원 해킹 그룹의 고도화된 공격 수법을 보여주는 중대한 보안 사례로 평가됩니다.
+
+[Threat Analysis] FIRESTARTER 백도어는 Cisco ASA(Adaptive Security Appliance) 소프트웨어의 취약점을 악용하여 설치됩니다. 기술 분석에 따르면, 이 악성코드는 시스템 펌웨어나 부팅 영역의 구성 요소를 변조함으로써 일반적인 소프트웨어 업데이트 및 보안 패치 설치 과정에서도 제거되지 않고 상주할 수 있습니다. 이는 공격자에게 지속적인 원격 접근 권한을 부여하며, 네트워크 경계 장비를 내부망 침투를 위한 전략적 교두보로 활용하게 합니다.
+
+[Impact Assessment] 이번 침해 사고는 연방 기관의 통신 데이터 보안과 내부 인프라의 신뢰성을 직접적으로 위협합니다. 방화벽과 같은 네트워크 장비는 엔드포인트 탐지 및 대응(EDR) 도구의 가시성에서 벗어나 있는 경우가 많아, 공격자는 장기간 탐지되지 않고 기밀 정보를 탈취하거나 네트워크 트래픽을 가로챌 수 있습니다. 패치를 통한 복구가 어렵다는 점은 침해 사고 대응에 막대한 비용과 시간을 소요하게 만듭니다.
+
+[Recommendations] 보안 관리자는 장비의 무결성 검증 기능을 활용하여 비정상적인 실행 파일이나 구성 변경을 주기적으로 확인해야 합니다. 관리 인터페이스에 대한 접근을 엄격히 제한하고 다요소 인증(MFA)을 필수적으로 도입해야 하며, 하드웨어 수준의 공장 초기화(Factory Reset) 또는 펌웨어 재설치를 포함한 포괄적인 복구 계획을 수립해야 합니다. 또한, CISA와 NCSC의 최신 위협 지표(IoC)를 모니터링 시스템에 반영할 것을 권고합니다.
+
+
+## References
+1. CISA, "Malware Analysis Report (MAR): FIRESTARTER Backdoor on Federal Networking Devices", CISA Publications, 2025
+2. NCSC UK, "Advisory: Persistent Malware Techniques in Network Edge Devices", NCSC, 2025
+3. MITRE ATT&CK: T1542.001 (Pre-OS Boot: System ROM)
+4. MITRE ATT&CK: T1133 (External Remote Services)
+5. Cisco Security Advisory, "Critical Vulnerability in ASA Software Persistence Mechanisms", Cisco PSIRT, 2025
+## Original Source
+[The Hacker News](https://thehackernews.com/2026/04/firestarter-backdoor-hit-federal-cisco.html)
+    
