@@ -1,0 +1,27 @@
+{
+  "id": "e142012e-252e-4bd5-9135-a904c611712e",
+  "title": "⚡ Weekly Recap: Exchange 0-Day, npm Worm, Fake AI Repo, Cisco Exploit and More",
+  "url": "https://thehackernews.com/2026/05/weekly-recap-exchange-0-day-npm-worm.html",
+  "content": "Monday opens with a trust problem. A mail server flaw is under active use. A network control system was targeted. Trusted packages were poisoned. A fake model page pushed a stealer. Then came the familiar ransom claim: the data was returned and deleted.\nThe pattern is clear. One weak dependency can leak keys. One leaked key can open cloud access. One cloud foothold can become a production",
+  "source": "The Hacker News",
+  "timestamp": "2026-05-18T23:00:07.000Z",
+  "severity_score": 8.5,
+  "severity_level": "HIGH",
+  "is_pre_analyzed": true,
+  "summary": "[요약 및 분석 보고서: 주간 보안 위협 동향]\n\n**Executive Overview:** 최근 사이버 보안 위협 지형은 신뢰할 수 있는 플랫폼과 공급망의 취약점을 악용하는 복합적인 공격으로 진화하고 있습니다. Exchange Server의 제로데이 취약점, npm 공급망 오염, 그리고 AI 저장소를 위장한 스틸러 배포는 기업의 핵심 인프라와 개발 에코시스템이 상시적인 위험에 노출되어 있음을 시사합니다. 이러한 위협은 단순한 기술적 결함을 넘어 조직의 신뢰 프로세스를 무너뜨리는 데 집중하고 있습니다.\n\n**Threat Analysis:** 공격자들은 주로 소프트웨어 공급망(npm worm)을 통해 초기 침투를 시도하거나, 인지도가 높은 AI 모델 저장소를 사칭하여 개발자의 자격 증명을 탈취하는 전술을 구사합니다. 특히 Exchange Server와 같은 메일 서버의 제로데이 취약점은 직접적인 침투 경로를 제공하며, 일단 클라우드나 생산 환경에 발을 들인 공격자는 권한 상승 및 내부 이동(Lateral Movement)을 통해 민감 데이터를 유출합니다. 이는 단일 접점의 약점이 전체 인프라 붕괴로 이어지는 전형적인 공격 체인을 형성합니다.\n\n**Impact Assessment:** 이번 위협의 영향력은 기업의 데이터 기밀성뿐만 아니라 비즈니스 연속성 전반에 걸쳐 치명적입니다. 소스 코드에 포함된 API 키나 클라우드 자격 증명이 유출될 경우, 공격자는 생산 환경에 직접 접근하여 데이터 탈취 및 랜섬웨어 유포를 수행할 수 있습니다. 특히 AI 모델이나 패키지 저장소와 같은 개발 도구의 오염은 보안 검증 프로세스를 우회하여 광범위한 하부 사용자들에게 피해를 확산시킵니다.\n\n**Recommendations:** 조직은 신속한 취약점 패치 관리(Vulnerability Management)를 최우선 순위로 두어야 하며, 특히 인터넷에 노출된 서버의 제로데이 대응 능력을 강화해야 합니다. 소프트웨어 자재 명세서(SBOM)를 도입하여 종속성 보안을 강화하고, 모든 계정에 대해 다요소 인증(MFA)을 필수적으로 적용해야 합니다. 또한, 자격 증명 유출에 대비하여 '최소 권한 원칙'을 수립하고 실시간 위협 탐지 및 대응(EDR/XDR) 체계를 고도화할 것을 권고합니다.",
+  "tags": [
+    "Supply Chain Attack",
+    "Zero-Day",
+    "Exchange Server",
+    "Credential Theft",
+    "Ransomware"
+  ],
+  "references": [
+    "Ohm et al., Backstabber's Knife Collection: A Review of Open Source Software Supply Chain Attacks, USENIX Security, 2020",
+    "CVE-2024-21410: Microsoft Exchange Server Elevation of Privilege Vulnerability",
+    "MITRE ATT&CK: T1190 (Exploit Public-Facing Application)",
+    "CISA, Known Exploited Vulnerabilities (KEV) Catalog, 2024",
+    "Mandiant, M-Trends 2024 Special Report, 2024"
+  ],
+  "is_analyzed": true
+}
