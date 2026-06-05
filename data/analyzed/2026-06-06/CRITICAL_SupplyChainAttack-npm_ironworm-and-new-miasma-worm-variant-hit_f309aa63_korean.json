@@ -1,0 +1,26 @@
+{
+  "id": "f309aa63-a976-4e0a-95e4-1547e94c305f",
+  "title": "IronWorm and New Miasma Worm Variant Hit npm in Supply Chain Attacks",
+  "url": "https://thehackernews.com/2026/06/ironworm-and-new-miasma-worm-variant.html",
+  "content": "Multiple software supply chain attacks have hit the npm ecosystem, with threat actors using both malicious and poisoned versions of over 50 legitimate packages to distribute a Rust-based information stealer and a self-spreading worm, respectively.\n\nAccording to JFrog, the information stealer \"scrapes every secret it can find on a developer's machine, hides behind an eBPF kernel rootkit, and",
+  "source": "The Hacker News",
+  "timestamp": "2026-06-05T23:00:02.815Z",
+  "severity_score": 8.8,
+  "severity_level": "CRITICAL",
+  "is_pre_analyzed": true,
+  "summary": "[Executive Overview] npm 생태계를 겨냥한 'IronWorm' 및 'Miasma' 웜의 새로운 변종이 포함된 대규모 소프트웨어 공급망 공격이 발생했습니다. 이번 공격은 50개 이상의 합법적인 패키지를 오염시키거나 모사하여 Rust 기반의 정보 탈취 소프트웨어를 유포하며, 개발자 환경에 심각한 보안 위협을 제기하고 있습니다. [Threat Analysis] 공격의 핵심은 Rust 언어를 사용해 분석 및 탐지를 어렵게 하고, eBPF(Extended Berkeley Packet Filter) 커널 루트킷을 통해 시스템 상에서의 존재를 은폐하는 고도화된 기술력에 있습니다. 'Miasma' 변종은 자가 증식 기능을 갖추어 npm 설치 프로세스를 통해 인접 시스템으로 확산되며, 시스템 내의 모든 기밀 정보(Secrets)를 탈취하는 특징을 보입니다. [Impact Assessment] 개발자 시스템이 침해될 경우 API 키, 자격 증명 및 소스 코드에 대한 무단 접근이 가능해지며, 이는 기업 전체의 인프라 침해나 추가적인 공급망 오염으로 이어지는 연쇄 작용을 일으킬 수 있습니다. 특히 커널 수준의 루트킷 사용은 기존의 엔드포인트 탐지 및 대응(EDR) 솔루션을 우회할 가능성이 큽니다. [Recommendations] 조직은 npm 패키지 설치 전 'npm audit' 및 정적 분석 도구를 통한 엄격한 검토를 수행해야 합니다. 또한, eBPF 활동을 모니터링할 수 있는 런타임 보안 도구를 도입하고, 개발 환경에서의 'Secrets' 관리 정책을 강화하며 신뢰할 수 없는 패키지 설치를 차단하는 프라이빗 패키지 레지스트리 사용을 권고합니다.",
+  "tags": [
+    "Supply Chain Attack",
+    "npm",
+    "eBPF Rootkit",
+    "Rust Malware",
+    "Worm"
+  ],
+  "references": [
+    "JFrog Security Research, IronWorm and New Miasma Worm Variant Hit npm, JFrog Blog, 2024",
+    "MITRE ATT&CK: T1195.001 (Supply Chain Compromise: Software Dependencies)",
+    "MITRE ATT&CK: T1014 (Rootkit)",
+    "Xiao et al., Understanding and Detecting Malicious Packages in Open Source Software Ecosystems, IEEE Transactions on Software Engineering, 2021"
+  ],
+  "is_analyzed": true
+}
