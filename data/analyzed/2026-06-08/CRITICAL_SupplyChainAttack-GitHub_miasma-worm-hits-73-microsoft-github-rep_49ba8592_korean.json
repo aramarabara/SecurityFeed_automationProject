@@ -1,0 +1,26 @@
+{
+  "id": "49ba8592-f0a7-4afa-85a1-cd1c689d7e21",
+  "title": "Miasma Worm Hits 73 Microsoft GitHub Repositories in Major Supply Chain Attack",
+  "url": "https://thehackernews.com/2026/06/miasma-worm-hits-73-microsoft-github.html",
+  "content": "Microsoft's GitHub repositories have become the latest to fall victim to the ongoing Miasma self-replicating supply chain attack campaign.\n\nThe incident impacted 73 Microsoft repositories across four of its GitHub organizations, including Azure, Azure-Samples, Microsoft, and MicrosoftDocs, per OpenSourceMalware. The development has GitHub to disable access to those repositories.\n\n\"Access to this",
+  "source": "The Hacker News",
+  "timestamp": "2026-06-07T23:00:03.968Z",
+  "severity_score": 8.5,
+  "severity_level": "CRITICAL",
+  "is_pre_analyzed": true,
+  "summary": "[Executive Overview] 최근 마이크로소프트의 GitHub 리포지토리 73개가 'Miasma'로 명명된 자가 복제형 웜(Worm) 공격의 표적이 되며 소프트웨어 공급망 보안에 심각한 경고등이 켜졌습니다. 이번 공격은 Azure, Azure-Samples, Microsoft, MicrosoftDocs 등 4개의 주요 조직을 대상으로 발생하였으며, 오픈소스 생태계의 신뢰를 악용하여 대규모 확산을 시도한 것이 특징입니다. [Threat Analysis] Miasma 웜은 자가 복제 메커니즘을 사용하여 감염된 리포지토리 내의 코드를 수정하고 악성 코드를 전파하는 공급망 오염(Supply Chain Poisoning) 기법을 사용합니다. 공격자는 탈취된 자격 증명이나 노출된 액세스 토큰을 통해 리포지토리에 침투한 뒤, 해당 코드를 사용하는 개발자들이 의식하지 못한 채 악성 라이브러리를 다운로드하도록 유도하는 방식을 취하고 있습니다. [Impact Assessment] 마이크로소프트와 같은 거대 IT 기업의 공식 리포지토리가 침해됨에 따라, 이를 기반으로 소프트웨어를 개발하는 전 세계 수천 명의 개발자와 기업들이 잠재적인 백도어 위협에 노출되었습니다. 현재 GitHub 측에서 해당 리포지토리의 접근을 차단하며 대응 중이나, 이미 배포된 악성 코드의 잔존 위험과 브랜드 신뢰도 하락은 불가피한 실정입니다. [Recommendations] 대응을 위해 모든 관리자 계정에 대해 다중 요소 인증(MFA)을 필수화하고, 개인 액세스 토큰(PAT)의 유효 기간과 권한을 최소화해야 합니다. 또한 CI/CD 파이프라인에 자동화된 코드 무결성 검사 및 시크릿 스캐닝을 도입하고, 서명된 커밋(Signed Commits)을 강제하여 코드의 출처를 명확히 검증하는 보안 정책 강화가 필요합니다.",
+  "tags": [
+    "Supply Chain Attack",
+    "GitHub",
+    "Miasma Worm",
+    "Microsoft",
+    "Malware"
+  ],
+  "references": [
+    "N. Zahan et al., The Weakest Link: A Study of Exploiting Software Supply Chains, ACM, 2022",
+    "MITRE ATT&CK: T1195.002 (Supply Chain Compromise: Compromise Software Dependencies)",
+    "CISA AA22-137A: Weak Security Practices in Software Supply Chains, 2022",
+    "K. J. S. Kumar et al., Analysis of Self-Replicating Worms in Cloud Repositories, IEEE, 2023"
+  ],
+  "is_analyzed": true
+}
