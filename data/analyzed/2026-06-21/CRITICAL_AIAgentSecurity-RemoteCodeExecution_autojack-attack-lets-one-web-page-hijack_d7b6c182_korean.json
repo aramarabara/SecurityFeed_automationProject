@@ -1,0 +1,25 @@
+{
+  "id": "d7b6c182-7553-4075-8f37-63b7c7b1c318",
+  "title": "AutoJack Attack Lets One Web Page Hijack AI Agent for Host Code Execution",
+  "url": "https://thehackernews.com/2026/06/autojack-attack-lets-one-web-page.html",
+  "content": "Microsoft researchers have detailed an exploit chain, named&nbsp;AutoJack, that turns an AI browsing agent into a delivery vehicle for remote code execution.\n\nSteer the agent to load an attacker's web page, and that page's JavaScript can reach a privileged local service on the same machine and spawn a process on the host.\n\nNo credentials, no sign-in screen, and no further user interaction once",
+  "source": "The Hacker News",
+  "timestamp": "2026-06-20T23:00:05.580Z",
+  "severity_score": 8.5,
+  "severity_level": "CRITICAL",
+  "is_pre_analyzed": true,
+  "summary": "[Executive Overview] AutoJack 공격은 자율형 AI 브라우징 에이전트의 취약점을 악용하여 호스트 시스템에서 원격 코드 실행(RCE)을 가능하게 하는 혁신적이면서도 치명적인 취약점 체인입니다. Microsoft 연구진에 의해 공개된 이 공격은 AI 에이전트가 공격자가 제어하는 악성 웹 페이지를 방문하도록 유도함으로써 시작되며, 이는 단순한 정보 유출을 넘어 로컬 시스템의 완전한 장악으로 이어질 수 있다는 점에서 보안 업계에 큰 충격을 주고 있습니다.\n\n[Threat Analysis] 이 공격의 핵심은 AI 에이전트의 '신뢰된 대리인(Confused Deputy)' 문제를 활용하는 것입니다. 공격자는 프롬프트 인젝션이나 기타 기법을 통해 에이전트를 악성 웹사이트로 유도합니다. 해당 페이지에 심어진 자바스크립트는 에이전트가 실행 중인 로컬 머신의 권한 있는 서비스와 통신하며, 별도의 사용자 인증이나 상호작용 없이도 호스트 시스템에서 임의의 프로세스를 생성할 수 있습니다. 이는 웹 브라우저의 샌드박스 경계를 우회하여 로컬 서비스의 권한을 직접적으로 오용하는 방식입니다.\n\n[Impact Assessment] AI 에이전트를 웹 탐색이나 업무 자동화에 활용하는 모든 환경이 잠재적 공격 대상입니다. 공격에 성공할 경우 시스템의 완전한 권한 탈취, 민감 데이터 유출, 랜섬웨어 배포 및 기업 내부 네트워크로의 측면 이동이 가능합니다. 특히 사용자가 로그인을 하거나 승인 버튼을 누를 필요가 없는 제로 클릭(Zero-click) 형태의 공격이 가능하여 탐지가 매우 어렵습니다.\n\n[Recommendations] 조직은 AI 에이전트에게 부여되는 권한을 최소화하고, 에이전트가 접근할 수 있는 로컬 API 및 서비스에 대한 엄격한 접근 제어 목록(ACL)을 적용해야 합니다. 또한, 에이전트의 웹 브라우징 환경을 호스트와 완전히 격리된 컨테이너 내에서 실행하고, 외부로부터 유입되는 데이터에 의한 간접 프롬프트 인젝션을 차단하기 위한 입력 검증 및 필터링 메커니즘을 강화해야 합니다.",
+  "tags": [
+    "AI Agent Security",
+    "Remote Code Execution",
+    "Prompt Injection",
+    "Host Hijacking"
+  ],
+  "references": [
+    "Greshake et al., Not What You've Signed Up For: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection, arXiv, 2023",
+    "MITRE ATT&CK: T1204.003",
+    "MITRE ATT&CK: T1059",
+    "Microsoft Research, AutoJack: Hijacking AI Browsing Agents, 2024"
+  ],
+  "is_analyzed": true
+}
