@@ -1,0 +1,26 @@
+{
+  "id": "5d29f411-8ca1-40b9-9c41-5df8248c59ce",
+  "title": "Researchers Detail DifyTap Flaws in Dify That Could Expose AI Chats Across Tenants",
+  "url": "https://thehackernews.com/2026/06/researchers-detail-difytap-flaws-in.html",
+  "content": "Cybersecurity researchers have disclosed details of four vulnerabilities in Dify, an open-source agentic workflow platform with more than 146,000 GitHub stars, that could allow attackers to stealthily read artificial intelligence (AI) conversions from other customers' applications without requiring authentication.\n\nThe vulnerabilities have been collectively codenamed DifyTap by Zafran Security.",
+  "source": "The Hacker News",
+  "timestamp": "2026-06-22T23:00:06.229Z",
+  "severity_score": 8.8,
+  "severity_level": "CRITICAL",
+  "is_pre_analyzed": true,
+  "summary": "DifyTap은 146,000개 이상의 GitHub 스타를 보유한 오픈소스 AI 에이전트 플랫폼인 Dify에서 발견된 4개의 취약점 모음입니다. 이 취약점은 인증 없이도 다른 테넌트의 AI 대화 내용을 탈취할 수 있게 하여 기업의 민감 정보 노출 위험을 초래합니다. Zafran Security에 의해 명명된 이 공격 벡터는 멀티테넌트 환경의 격리 메커니즘을 우회하며, AI 인프라의 보안 모델에 심각한 도전 과제를 제시합니다. 기술 분석에 따르면, 공격자는 인증 과정을 거치지 않고도 특정 엔드포인트를 통해 다른 사용자의 애플리케이션 데이터를 조회할 수 있습니다. 이는 전형적인 Broken Object Level Authorization(BOLA) 또는 테넌트 간 격리 미비로 인해 발생하며, 공격자는 스텔스 방식으로 정보를 수집하여 탐지가 어렵습니다. 영향 평가 측면에서, Dify를 기반으로 내부 도구를 구축한 조직은 전략적 기밀, 개인정보 및 고유 프롬프트 자산이 노출될 위기에 처해 있습니다. 특히 AI 기반의 자동화가 가속화되는 현 시점에서 이러한 노출은 연쇄적인 비즈니스 손실을 유발할 수 있습니다. 권고 사항으로 조직은 즉각적인 시스템 업데이트를 수행하고, API 접근 제어 목록(ACL)을 재점검해야 합니다. 또한 전송 중인 데이터의 암호화와 더불어 비정상적인 데이터 접근 패턴을 탐지하기 위한 통합 로깅 시스템 구축이 필요합니다.",
+  "tags": [
+    "AI Security",
+    "Cross-Tenant Leakage",
+    "DifyTap",
+    "API Vulnerability",
+    "LLM Security"
+  ],
+  "references": [
+    "Zafran Security, DifyTap: Stealthily Accessing AI Conversations Across Tenants, Research Report, 2024",
+    "OWASP, Top 10 for LLM Applications v1.1 - LLM06: Sensitive Information Disclosure, 2023",
+    "MITRE ATT&CK: T1190 (Exploit Public-Facing Application)",
+    "NIST, Adversarial Machine Learning: A Taxonomy and Terminology of Attacks and Mitigations (NIST AI 100-2E2023), 2023"
+  ],
+  "is_analyzed": true
+}
