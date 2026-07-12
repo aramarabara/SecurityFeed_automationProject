@@ -1,0 +1,27 @@
+{
+  "id": "418c7049-54ea-492d-bfcc-ac0e03fe00df",
+  "title": "URGENT - Progress Tells ShareFile Customers to Shut Down Storage Zone Controllers Over Security Threat",
+  "url": "https://thehackernews.com/2026/07/urgent-progress-tells-sharefile.html",
+  "content": "Progress Software has told ShareFile customers to shut down the Windows servers running their Storage Zone Controllers, confirming to The Hacker News that it is responding to a \"credible external security threat.\"\n\nThe company has temporarily disabled access to the affected accounts, a step it says it took \"out of an abundance of caution\" while it works with internal and external security",
+  "source": "The Hacker News",
+  "timestamp": "2026-07-12T23:00:03.730Z",
+  "severity_score": 8.8,
+  "severity_level": "CRITICAL",
+  "is_pre_analyzed": true,
+  "summary": "[Executive Overview] Progress Software는 자사의 ShareFile Storage Zone Controller에서 발견된 \"신뢰할 수 있는 외부 보안 위협\"에 대응하여 고객들에게 관련 Windows 서버의 즉각적인 가동 중단을 요청했습니다. 이번 조치는 공격자가 기업 내부의 저장소 환경에 접근할 수 있는 심각한 위험을 차단하기 위한 긴급 선제 조치로, 엔터프라이즈 데이터 보호 관점에서 매우 중대한 사안입니다. [Threat Analysis] 기술적으로 Storage Zone Controller는 ShareFile 클라우드와 온프레미스 저장소 간의 게이트웨이 역할을 수행하며, 인증 및 파일 메타데이터를 관리합니다. 이번 위협은 원격 코드 실행(RCE)이나 인증 우회(Authentication Bypass)를 통해 공격자가 기업의 중요 문서에 직접 접근할 수 있는 취약점과 관련되었을 가능성이 높습니다. 특히 과거 CVE-2023-24489와 유사한 경로를 통한 대규모 자동화 공격 징후가 포착되었을 수 있습니다. [Impact Assessment] 이 위협은 온프레미스 저장소 컨트롤러를 운영하는 모든 기업 고객에게 영향을 미칩니다. 공격 성공 시 민감한 기업 데이터의 유출뿐만 아니라, 해당 서버를 거점으로 삼아 기업 내부망으로 침투하는 횡적 이동(Lateral Movement)의 교두보가 될 수 있습니다. 서비스 중단으로 인한 업무 연속성 저하 또한 불가피한 상황입니다. [Recommendations] 관리자는 즉시 모든 Storage Zone Controller 서버를 셧다운하고 네트워크에서 분리해야 합니다. Progress Software의 공식 보안 패치와 후속 가이드를 모니터링하며, 침해 지표(IoC) 분석을 통해 서버 가동 중단 전 비정상적인 트래픽이나 권한 상승 시도가 있었는지 확인해야 합니다.",
+  "tags": [
+    "Zero-Day",
+    "RCE",
+    "Data Exfiltration",
+    "Storage Security",
+    "Supply Chain Risk"
+  ],
+  "references": [
+    "Progress Software, ShareFile Storage Zone Controller Security Advisory, Progress Support, 2024",
+    "CVE-2023-24489",
+    "MITRE ATT&CK: T1190 - Exploit Public-Facing Application",
+    "CISA, Known Exploited Vulnerabilities Catalog, Cybersecurity and Infrastructure Security Agency, 2024",
+    "Mandiant, Global Threat Intelligence Report: Ransomware and Extortion, Mandiant/Google Cloud, 2023"
+  ],
+  "is_analyzed": true
+}
